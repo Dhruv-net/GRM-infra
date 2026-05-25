@@ -1,0 +1,10 @@
+/* Global design system + per-page styles.
+ * base.css is the shared chrome (tokens, nav, buttons, footer, reveal/tilt).
+ * Each page stylesheet is scoped enough not to collide (page-hero variants
+ * were renamed during the port). */
+@import './styles/base.css';
+@import './styles/home.css';
+@import './styles/about.css';
+@import './styles/solutions.css';
+@import './styles/projects.css';
+@import './styles/globalImpact.css';
