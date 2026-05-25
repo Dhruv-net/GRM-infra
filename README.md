@@ -33,10 +33,7 @@ src/
     projects.css
     globalImpact.css
   pages/
-    *.jsx               One component per route
-    *.html              The page body markup, imported raw and rendered
-  components/
-    Page.jsx            Wraps a page body + shared effects
+    *.jsx               One JSX component per route (full markup as JSX)
   hooks/
     usePageEffects.js   Scroll reveal, animated counters, card tilt, the
                         projects filter, and legacy .html -> SPA link rewriting
@@ -45,10 +42,11 @@ src/
 
 ### Notes
 
-- Pages are ported from the original static HTML by importing each page's body
-  markup verbatim (`?raw`) and rendering it, which keeps the bespoke SVGs and
-  layout pixel-faithful. Interactivity that was previously in `shared.js` and
-  `hero-3d.js` now lives in the hooks above.
+- Each page is a real JSX component holding the full markup (the bespoke SVG
+  diagrams included). Each renders into a `ref`'d wrapper, and the shared
+  interactivity that was previously in `shared.js` and `hero-3d.js` runs against
+  that ref via the hooks above (so internal `*.html` links are still rewritten
+  to client-side navigation).
 - The old `tweaks-panel.jsx` / `hero-tweaks.jsx` dev overlay was intentionally
   left out of the production app.
 - `public/_redirects` enables SPA deep-linking on Netlify.
