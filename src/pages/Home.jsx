@@ -194,41 +194,41 @@ export default function Home() {
           <a className="proj feature" href="projects.html">
             <div className="proj-img"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80" alt=""/></div>
             <div className="proj-meta">
-              <span className="tag"><span className="green">●</span> Solar EPC · 480 MW</span>
-              <h3>Anantapur-II tracker plant</h3>
-              <div className="body-sm">Andhra Pradesh, IN — operational 2025</div>
-            </div>
-          </a>
-          <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt=""/></div>
-            <div className="proj-meta">
-              <span className="tag"><span className="green">●</span> BESS · 200 MWh</span>
-              <h3>Mundra grid-tie storage</h3>
-              <div className="body-sm">Gujarat, IN — comm. 2026</div>
-            </div>
-          </a>
-          <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=900&q=80" alt=""/></div>
-            <div className="proj-meta">
-              <span className="tag"><span className="amber">●</span> Heavy lift</span>
-              <h3>Bhuj turbine erection</h3>
-              <div className="body-sm">42 nacelles · 240t lifts</div>
-            </div>
-          </a>
-          <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=900&q=80" alt=""/></div>
-            <div className="proj-meta">
-              <span className="tag"><span className="green">●</span> Solar EPC · 120 MW</span>
-              <h3>Khavda hybrid block</h3>
-              <div className="body-sm">Solar + 60 MWh BESS</div>
+              <span className="tag"><span className="green">●</span> BESS · 8 MW</span>
+              <h3>Norwich storage block</h3>
+              <div className="body-sm">United Kingdom — turnkey delivery · 2025</div>
             </div>
           </a>
           <a className="proj" href="projects.html">
             <div className="proj-img"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=900&q=80" alt=""/></div>
             <div className="proj-meta">
-              <span className="tag"><span className="amber">●</span> Port logistics</span>
-              <h3>Krishnapatnam handling</h3>
-              <div className="body-sm">Component import & rigging</div>
+              <span className="tag"><span className="green">●</span> Solar · 6 MW</span>
+              <h3>Yerbeston solar farm</h3>
+              <div className="body-sm">United Kingdom — UK SOL panels · 2025</div>
+            </div>
+          </a>
+          <a className="proj" href="projects.html">
+            <div className="proj-img"><img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-meta">
+              <span className="tag"><span className="green">●</span> Wind · 1.5 MW</span>
+              <h3>Crossford wind farm</h3>
+              <div className="body-sm">Operational since 2022 · 2.7 GWh/yr</div>
+            </div>
+          </a>
+          <a className="proj" href="projects.html">
+            <div className="proj-img"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-meta">
+              <span className="tag"><span className="green">●</span> Solar · 3.8 MWp</span>
+              <h3>Cēsis solar plant</h3>
+              <div className="body-sm">Latvia — CORAB mounting · 2025</div>
+            </div>
+          </a>
+          <a className="proj" href="projects.html">
+            <div className="proj-img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-meta">
+              <span className="tag"><span className="green">●</span> BESS · 5 MW</span>
+              <h3>Algeria storage system</h3>
+              <div className="body-sm">Algeria — lithium-ion · 2025</div>
             </div>
           </a>
         </div>
