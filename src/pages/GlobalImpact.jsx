@@ -8,13 +8,7 @@ export default function GlobalImpact() {
     <div ref={ref}>
       <header className="nav">
         <a href="index.html" className="nav-logo">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <rect x="0" y="0" width="32" height="32" rx="6" fill="#34d399"/>
-            <rect x="6" y="8"  width="14" height="2" fill="#0a0a0a"/>
-            <rect x="6" y="13" width="20" height="2" fill="#0a0a0a"/>
-            <rect x="6" y="18" width="10" height="2" fill="#0a0a0a"/>
-            <rect x="6" y="23" width="20" height="2" fill="#0a0a0a"/>
-          </svg>
+          <img src="/brand/grm-logo.jpeg" alt="GRM Infra" className="brand-mark"/>
           <span className="wordmark">GRM<span className="infra">INFRA</span></span>
         </a>
         <nav className="nav-links">
@@ -298,13 +292,7 @@ export default function GlobalImpact() {
         <div className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                <rect x="0" y="0" width="32" height="32" rx="6" fill="#34d399"/>
-                <rect x="6" y="8"  width="14" height="2" fill="#0a0a0a"/>
-                <rect x="6" y="13" width="20" height="2" fill="#0a0a0a"/>
-                <rect x="6" y="18" width="10" height="2" fill="#0a0a0a"/>
-                <rect x="6" y="23" width="20" height="2" fill="#0a0a0a"/>
-              </svg>
+              <img src="/brand/grm-logo.jpeg" alt="GRM Infra" className="brand-mark brand-mark--footer"/>
               <span style={{ fontWeight: "600", letterSpacing: "0.18em" }}>GRM<span style={{ fontWeight: "300", color: "var(--bone-dim)", marginLeft: "4px" }}>INFRA</span></span>
             </div>
             <div className="footer-tag">Steady delivery<br/>for the energy<br/>transition.</div>

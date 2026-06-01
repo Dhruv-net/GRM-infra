@@ -109,6 +109,8 @@ section { position: relative; }
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; }
 .nav-logo svg { display: block; }
+.brand-mark { height: 34px; width: auto; display: block; border-radius: 5px; }
+.brand-mark--footer { height: 42px; }
 .nav-logo .wordmark {
   font-family: var(--sans);
   font-weight: 600;
