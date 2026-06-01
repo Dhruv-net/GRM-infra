@@ -45,7 +45,7 @@
   }
   .feat-card .bg {
     position: absolute; inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2000&q=80');
+    background-image: url('/projects/norwich.jpg');
     background-size: cover; background-position: center;
     filter: grayscale(0.3) contrast(1.1);
   }

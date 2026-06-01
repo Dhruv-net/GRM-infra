@@ -29,18 +29,19 @@ export default function Solutions() {
       
       <section className="sol-hero">
         <div className="wrap">
-          <div className="eyebrow reveal" style={{ marginBottom: "36px" }}><span className="dot"></span>Three integrated practices · One delivery model</div>
-          <h1 className="h-display reveal">From the <em>panel</em><br/>to the <em>grid</em>.</h1>
-          <p className="lede reveal">GRM operates three engineering practices that, together, can take a site from raw land to grid synchronisation under a single contract — utility-scale solar, battery storage, and the lifting infrastructure that puts both in place.</p>
+          <div className="eyebrow reveal" style={{ marginBottom: "36px" }}><span className="dot"></span>Six integrated solutions · One delivery model</div>
+          <h1 className="h-display reveal">Integrated renewable power solutions<br/>for the <em>future grid.</em></h1>
+          <p className="lede reveal">Utility-scale solar, battery storage, and wind farm development — engineered for grid reliability and a globally scalable energy transition.</p>
         </div>
       </section>
       
       <nav className="toc">
-        <a href="#solar"><span><span className="num">01</span>  Utility Solar</span><span>→</span></a>
-        <a href="#bess"><span><span className="num">02</span>  BESS Integration</span><span>→</span></a>
-        <a href="#cranes"><span><span className="num">03</span>  Crane Engineering</span><span>→</span></a>
-        <a href="#hybrid"><span><span className="num">04</span>  Hybrid Plants</span><span>→</span></a>
-        <a href="#oandm"><span><span className="num">05</span>  O&M Services</span><span>→</span></a>
+        <a href="#solar"><span><span className="num">01</span>   Utility-Scale Solar</span><span>→</span></a>
+        <a href="#bess"><span><span className="num">02</span>   BESS Integration</span><span>→</span></a>
+        <a href="#cranes"><span><span className="num">03</span>   Wind Farm Infrastructure</span><span>→</span></a>
+        <a href="#epc"><span><span className="num">04</span>   EPC & Construction</span><span>→</span></a>
+        <a href="#oandm"><span><span className="num">05</span>   Operations & Maintenance</span><span>→</span></a>
+        <a href="#ems"><span><span className="num">06</span>   Advanced EMS & Monitoring</span><span>→</span></a>
       </nav>
       
       
@@ -49,9 +50,9 @@ export default function Solutions() {
           <div className="sol-head">
             <div>
               <div className="num reveal">01 / Utility Solar</div>
-              <h2 className="reveal">Tracker plants,<br/>built to <em>operate.</em></h2>
+              <h2 className="reveal">Advanced arrays,<br/>designed to <em>deliver.</em></h2>
             </div>
-            <p className="reveal">End-to-end EPC for ground-mounted solar — site assessment, single-axis tracker design, balance-of-plant, substation works, and grid synchronisation. Plants from 20 MW to 1 GW, delivered against a fixed schedule with a single accountable team.</p>
+            <p className="reveal">End-to-end EPC for ground-mounted solar — site assessment, single-axis tracker design, balance-of-plant, substation works, and grid synchronisation. Plants from 5 MW to 1 GW, delivered against a fixed schedule with a single accountable team.</p>
           </div>
       
           <div className="sol-body">
@@ -131,7 +132,7 @@ export default function Solutions() {
           <div className="sol-head">
             <div>
               <div className="num reveal">02 / BESS Integration</div>
-              <h2 className="reveal">Storage <em>integrated,</em><br/>not bolted on.</h2>
+              <h2 className="reveal">Storage <em>redefined</em><br/>through integration.</h2>
             </div>
             <p className="reveal">Full-stack battery energy storage: containerised systems from 5 MWh to 500 MWh, integrated EMS, PCS sizing, thermal management, and grid-forming control modes for renewables firming and ancillary services.</p>
           </div>
@@ -218,18 +219,18 @@ export default function Solutions() {
         <div className="sol-wrap">
           <div className="sol-head">
             <div>
-              <div className="num reveal" style={{ color: "var(--amber)" }}>03 / Crane Engineering</div>
-              <h2 className="reveal">Lifting <em>plans</em><br/>that hold up.</h2>
+              <div className="num reveal" style={{ color: "var(--amber)" }}>03 / Wind Farm</div>
+              <h2 className="reveal">Powering the future<br/>through <em>wind.</em></h2>
             </div>
-            <p className="reveal">The original GRM practice: heavy-lift planning, rigging engineering, crawler & lattice crane operations. We move turbines, BESS containers, transformers, and reactor vessels — and we engineer the lift before we mobilise the steel.</p>
+            <p className="reveal">Designed for modern renewable infrastructure, GRM's wind farm delivery model combines engineering oversight, construction capability, and grid-ready execution from ground to generation.</p>
           </div>
       
           <div className="sol-body">
             <div className="sol-features reveal">
-              <div className="feat"><div className="id">F.01</div><div><h4>Lift planning & engineering</h4><p>Every lift gets a stamped lift plan: load chart verification, ground-bearing calc, tail/head swing, weather windows.</p></div></div>
-              <div className="feat"><div className="id">F.02</div><div><h4>Crawler & lattice fleet</h4><p>Owned fleet of 28 cranes — Liebherr LR series, Manitowoc, Demag CC class. Capacity to 1,200 t.</p></div></div>
-              <div className="feat"><div className="id">F.03</div><div><h4>Rigging & spreader bars</h4><p>In-house design and load-test of project-specific rigging, lifting frames, and turbine root inserts.</p></div></div>
-              <div className="feat"><div className="id">F.04</div><div><h4>Port & site logistics</h4><p>Component handling at port, SPMT trailer convoys, site access & ground prep, climate windows for lift execution.</p></div></div>
+              <div className="feat"><div className="id">F.01</div><div><h4>Wind resource & turbine strategy</h4><p>Wind resource assessment, site optimisation, and turbine platform selection across IEC class I–III configurations for utility-scale deployment.</p></div></div>
+              <div className="feat"><div className="id">F.02</div><div><h4>Foundation & infrastructure design</h4><p>Gravity-base, monopile, and jacket foundation coordination alongside access roads, hardstands, and cable corridor infrastructure.</p></div></div>
+              <div className="feat"><div className="id">F.03</div><div><h4>Electrical systems & grid integration</h4><p>Inter-array and export cable routing, MV/HV infrastructure, SCADA integration, and grid-code compliant connection design.</p></div></div>
+              <div className="feat"><div className="id">F.04</div><div><h4>Construction delivery & commissioning</h4><p>Construction supervision, FAT/SAT testing, turbine commissioning, performance validation, and final project handover documentation.</p></div></div>
             </div>
       
             <div className="sol-diagram reveal">
@@ -315,30 +316,201 @@ export default function Solutions() {
           </div>
       
           <div className="specs">
-            <div className="spec"><div className="v">28</div><div className="l">Cranes in fleet</div></div>
-            <div className="spec"><div className="v">1,200<span className="u">t</span></div><div className="l">Max capacity</div></div>
-            <div className="spec"><div className="v">160<span className="u">m</span></div><div className="l">Max lift height</div></div>
-            <div className="spec"><div className="v">2,400+</div><div className="l">Lifts executed</div></div>
+            <div className="spec"><div className="v">50–500<span className="u">MW</span></div><div className="l">Project capacity</div></div>
+            <div className="spec"><div className="v">I–III</div><div className="l">IEC turbine class</div></div>
+            <div className="spec"><div className="v">160<span className="u">m</span></div><div className="l">Max hub height</div></div>
+            <div className="spec"><div className="v">30<span className="u">yr</span></div><div className="l">Asset design life</div></div>
           </div>
         </div>
       </section>
       
       
-      <section className="sol alt" id="hybrid">
+      <section className="sol alt" id="epc">
         <div className="sol-wrap">
           <div className="sol-head">
             <div>
-              <div className="num reveal">04 / Hybrid Plants & 05 / O&M</div>
+              <div className="num reveal">04 / EPC &amp; Construction</div>
               <h2 className="reveal">One contract.<br/>One <em>operator.</em></h2>
             </div>
-            <p className="reveal">When solar, storage, and substation work need to deliver as one asset, GRM is the single accountable EPC. After commissioning, our O&M practice runs the plant — performance ratio guarantees, predictive maintenance, and the same engineers on the same asset.</p>
+            <p className="reveal">GRM acts as Principal Contractor or Owner's Engineer across EPC projects from 5 MW to 1 GW. Our integrated QA/QC systems, programme controls, and multi-tier supplier network keep delivery on schedule, within budget, and fully compliant with CDM and safety standards. From civils through to grid energisation, every interface is managed by a dedicated engineer accountable to a single integrated programme.</p>
           </div>
-      
+
+          <div className="sol-body">
+            <div className="sol-features reveal">
+              <div className="feat"><div className="id">F.01</div><div><h4>Engineering &amp; Design Management</h4><p>Detailed design coordination, IFC drawing release, and integrated programme alignment across all disciplines.</p></div></div>
+              <div className="feat"><div className="id">F.02</div><div><h4>Procurement &amp; Supply Chain Control</h4><p>Multi-tier procurement management, FAT supervision, logistics coordination, and supplier performance oversight.</p></div></div>
+              <div className="feat"><div className="id">F.03</div><div><h4>Construction, HSE &amp; Quality Assurance</h4><p>Civil, mechanical, and electrical site execution supported by CDM 2015 compliance, Principal Designer duties, site-wide QA/QC plans, ITPs, and non-conformance management.</p></div></div>
+              <div className="feat"><div className="id">F.04</div><div><h4>Commissioning &amp; Project Handover</h4><p>End-to-end commissioning, grid energisation, performance testing, and final takeover management.</p></div></div>
+            </div>
+
+            <div className="sol-diagram reveal">
+              <div className="label">DIAGRAM — EPC PROGRAMME (GANTT)</div>
+              <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
+                <text x="40" y="40" fontFamily="ui-monospace,monospace" fontSize="10" fill="#34d399" letterSpacing="2">EPC PROGRAMME · 14 MO</text>
+                <g stroke="#2a2a2a" strokeWidth=".5">
+                  <line x1="210" y1="70" x2="210" y2="392"/>
+                  <line x1="300" y1="70" x2="300" y2="392"/>
+                  <line x1="390" y1="70" x2="390" y2="392"/>
+                  <line x1="480" y1="70" x2="480" y2="392"/>
+                  <line x1="560" y1="70" x2="560" y2="392"/>
+                </g>
+                <g fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">
+                  <text x="40" y="104">ENGINEERING</text>
+                  <rect x="210" y="92" width="115" height="15" fill="rgba(52,211,153,.18)" stroke="#34d399" strokeWidth="1"/>
+                  <text x="40" y="148">PROCUREMENT</text>
+                  <rect x="255" y="136" width="160" height="15" fill="rgba(52,211,153,.18)" stroke="#34d399" strokeWidth="1"/>
+                  <text x="40" y="192">CIVIL / BoP</text>
+                  <rect x="300" y="180" width="180" height="15" fill="rgba(52,211,153,.18)" stroke="#34d399" strokeWidth="1"/>
+                  <text x="40" y="236">DC / AC / MV</text>
+                  <rect x="390" y="224" width="140" height="15" fill="rgba(52,211,153,.18)" stroke="#34d399" strokeWidth="1"/>
+                  <text x="40" y="280">COMMISSIONING</text>
+                  <rect x="500" y="268" width="60" height="15" fill="rgba(251,191,36,.22)" stroke="#fbbf24" strokeWidth="1"/>
+                </g>
+                <line x1="210" y1="392" x2="560" y2="392" stroke="#34d399" strokeWidth=".5"/>
+                <g fontFamily="ui-monospace,monospace" fontSize="9" fill="#6e6c66" letterSpacing="1">
+                  <text x="205" y="410">M0</text>
+                  <text x="385" y="410">M7</text>
+                  <text x="540" y="410">M14</text>
+                </g>
+              </svg>
+              <div className="legend"><span><i style={{ background: "#34d399" }}></i>WORKS</span><span><i style={{ background: "#fbbf24" }}></i>COMMISSIONING</span></div>
+              <div className="scale">GRID SYNC · M14</div>
+            </div>
+          </div>
+
+          <div className="specs">
+            <div className="spec"><div className="v">9–18<span className="u">mo</span></div><div className="l">Build programme</div></div>
+            <div className="spec"><div className="v">1<span className="u">GW</span></div><div className="l">Largest EPC</div></div>
+            <div className="spec"><div className="v">100<span className="u">%</span></div><div className="l">In-house engineering</div></div>
+            <div className="spec"><div className="v">30+</div><div className="l">Projects delivered</div></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="sol" id="oandm">
+        <div className="sol-wrap">
+          <div className="sol-head">
+            <div>
+              <div className="num reveal">05 / Operations &amp; Maintenance</div>
+              <h2 className="reveal">Performance,<br/><em>guaranteed.</em></h2>
+            </div>
+            <p className="reveal">GRM provides integrated O&amp;M services for renewable assets, focused on maximising availability, optimising performance, and protecting long-term asset value through proactive maintenance and real-time operational support.</p>
+          </div>
+
+          <div className="sol-body">
+            <div className="sol-features reveal">
+              <div className="feat"><div className="id">F.01</div><div><h4>Monitoring &amp; Operations</h4><p>24/7 NOC monitoring, alarm triage, remote reset support, and real-time operational oversight.</p></div></div>
+              <div className="feat"><div className="id">F.02</div><div><h4>Maintenance &amp; Asset Performance</h4><p>Scheduled, condition-based, and corrective maintenance alongside drone thermography, electroluminescence imaging, and BESS state-of-health tracking.</p></div></div>
+              <div className="feat"><div className="id">F.03</div><div><h4>Technical Support &amp; Lifecycle Management</h4><p>Warranty claims management, root-cause analysis, OEM coordination, repowering strategies, and end-of-life planning.</p></div></div>
+              <div className="feat"><div className="id">F.04</div><div><h4>Reporting &amp; Asset Assurance</h4><p>Monthly performance reporting, annual asset health assessments, spares and consumables management, and insurance-grade incident reporting.</p></div></div>
+            </div>
+
+            <div className="sol-diagram reveal">
+              <div className="label">DIAGRAM — AVAILABILITY (12 MO)</div>
+              <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
+                <text x="40" y="40" fontFamily="ui-monospace,monospace" fontSize="10" fill="#34d399" letterSpacing="2">FLEET AVAILABILITY · 99.6%</text>
+                <g stroke="#2a2a2a" strokeWidth=".5">
+                  <line x1="90" y1="110" x2="560" y2="110"/>
+                  <line x1="90" y1="200" x2="560" y2="200"/>
+                  <line x1="90" y1="290" x2="560" y2="290"/>
+                </g>
+                <g fontFamily="ui-monospace,monospace" fontSize="9" fill="#6e6c66">
+                  <text x="48" y="114">100</text>
+                  <text x="54" y="204">99</text>
+                  <text x="54" y="294">98</text>
+                </g>
+                <line x1="90" y1="146" x2="560" y2="146" stroke="#34d399" strokeWidth=".5" strokeDasharray="3 4"/>
+                <text x="500" y="140" fontFamily="ui-monospace,monospace" fontSize="9" fill="#34d399">TARGET</text>
+                <polyline points="110,160 150,150 190,158 230,142 270,150 310,138 350,148 390,140 430,134 470,150 510,142 550,136" fill="none" stroke="#34d399" strokeWidth="1.4"/>
+                <g fill="#34d399">
+                  <circle cx="110" cy="160" r="2.5"/><circle cx="150" cy="150" r="2.5"/><circle cx="190" cy="158" r="2.5"/>
+                  <circle cx="230" cy="142" r="2.5"/><circle cx="270" cy="150" r="2.5"/><circle cx="310" cy="138" r="2.5"/>
+                  <circle cx="350" cy="148" r="2.5"/><circle cx="390" cy="140" r="2.5"/><circle cx="430" cy="134" r="2.5"/>
+                  <circle cx="470" cy="150" r="2.5"/><circle cx="510" cy="142" r="2.5"/><circle cx="550" cy="136" r="2.5"/>
+                </g>
+                <line x1="90" y1="350" x2="560" y2="350" stroke="#34d399" strokeWidth=".5"/>
+                <g fontFamily="ui-monospace,monospace" fontSize="9" fill="#6e6c66" letterSpacing="1">
+                  <text x="104" y="368">JAN</text>
+                  <text x="500" y="368">DEC</text>
+                </g>
+              </svg>
+              <div className="legend"><span><i style={{ background: "#34d399" }}></i>AVAILABILITY</span></div>
+              <div className="scale">PR &gt; 84%</div>
+            </div>
+          </div>
+
           <div className="specs">
             <div className="spec"><div className="v">PR &gt; 84<span className="u">%</span></div><div className="l">Performance guarantee</div></div>
             <div className="spec"><div className="v">99.6<span className="u">%</span></div><div className="l">Availability target</div></div>
-            <div className="spec"><div className="v">25<span className="u">yr</span></div><div className="l">Long-term O&M</div></div>
+            <div className="spec"><div className="v">25<span className="u">yr</span></div><div className="l">Long-term O&amp;M</div></div>
             <div className="spec"><div className="v">24/7</div><div className="l">Remote monitoring</div></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="sol alt" id="ems">
+        <div className="sol-wrap">
+          <div className="sol-head">
+            <div>
+              <div className="num reveal">06 / Advanced EMS &amp; Monitoring</div>
+              <h2 className="reveal">Every electron,<br/><em>orchestrated.</em></h2>
+            </div>
+            <p className="reveal">GRM's integrated EMS/SCADA platform combines real-time monitoring, asset control, and commercial dispatch within a single secure system. Advanced forecasting, intelligent optimisation, and sub-second telemetry improve operational performance, maximise market value, and support evolving grid and energy market requirements.</p>
+          </div>
+
+          <div className="sol-body">
+            <div className="sol-features reveal">
+              <div className="feat"><div className="id">F.01</div><div><h4>Energy Trading &amp; Market Optimisation</h4><p>Day-ahead and intraday bidding, balancing mechanism dispatch, frequency response stacking, and route-to-market integration through intelligent forecasting and automated trading logic.</p></div></div>
+              <div className="feat"><div className="id">F.02</div><div><h4>Control Systems &amp; Asset Integration</h4><p>Multi-vendor integration of inverters, trackers, BESS, EV fleets, and demand response systems using open protocol architecture and edge gateway controls.</p></div></div>
+              <div className="feat"><div className="id">F.03</div><div><h4>Monitoring, Analytics &amp; SCADA Infrastructure</h4><p>Real-time telemetry, historian storage, HMI development, KPI dashboards, alarms, analytics pipelines, and API-enabled reporting with active/standby failover resilience.</p></div></div>
+              <div className="feat"><div className="id">F.04</div><div><h4>Cybersecurity &amp; Operational Assurance</h4><p>IEC 62443-aligned OT cybersecurity, NIS2 readiness assessments, audit trails, remediation planning, operator runbooks, and secure long-term system governance.</p></div></div>
+            </div>
+
+            <div className="sol-diagram reveal">
+              <div className="label">DIAGRAM — EMS CONTROL TOPOLOGY</div>
+              <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
+                <text x="40" y="40" fontFamily="ui-monospace,monospace" fontSize="10" fill="#34d399" letterSpacing="2">EMS · SINGLE PANE</text>
+                <line x1="170" y1="135" x2="270" y2="215" stroke="#34d399" strokeWidth=".8" strokeDasharray="3 3"/>
+                <line x1="170" y1="320" x2="270" y2="245" stroke="#34d399" strokeWidth=".8" strokeDasharray="3 3"/>
+                <line x1="360" y1="230" x2="450" y2="230" stroke="#fbbf24" strokeWidth=".8" strokeDasharray="3 3"/>
+                <rect x="240" y="195" width="120" height="80" fill="#131313" stroke="#34d399" strokeWidth="1.6"/>
+                <text x="300" y="230" textAnchor="middle" fontFamily="ui-monospace,monospace" fontSize="12" fill="#34d399" letterSpacing="2">EMS</text>
+                <text x="300" y="248" textAnchor="middle" fontFamily="ui-monospace,monospace" fontSize="8" fill="#6e6c66" letterSpacing="1">CONTROLLER</text>
+                <g transform="translate(70 100)">
+                  <rect x="0" y="0" width="100" height="56" fill="#1c1c1c" stroke="#34d399" strokeWidth="1"/>
+                  <path d="M14 40 L40 16 L86 16 L60 40 Z" fill="rgba(52,211,153,.12)" stroke="#34d399" strokeWidth=".6"/>
+                  <text x="50" y="74" textAnchor="middle" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">PV ARRAY</text>
+                </g>
+                <g transform="translate(70 300)">
+                  <rect x="0" y="0" width="100" height="56" fill="#1c1c1c" stroke="#34d399" strokeWidth="1"/>
+                  <rect x="16" y="14" width="20" height="28" stroke="#34d399" strokeWidth=".6" fill="none"/>
+                  <rect x="42" y="14" width="20" height="28" stroke="#34d399" strokeWidth=".6" fill="none"/>
+                  <rect x="68" y="14" width="16" height="28" stroke="#34d399" strokeWidth=".6" fill="none"/>
+                  <text x="50" y="74" textAnchor="middle" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">BESS</text>
+                </g>
+                <g transform="translate(450 195)">
+                  <line x1="30" y1="0" x2="30" y2="70" stroke="#fbbf24" strokeWidth="1"/>
+                  <line x1="10" y1="14" x2="50" y2="14" stroke="#fbbf24" strokeWidth="1"/>
+                  <line x1="10" y1="34" x2="50" y2="34" stroke="#fbbf24" strokeWidth="1"/>
+                  <line x1="2" y1="0" x2="58" y2="0" stroke="#fbbf24" strokeWidth="1"/>
+                  <text x="30" y="92" textAnchor="middle" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">GRID</text>
+                </g>
+                <text x="180" y="172" fontFamily="ui-monospace,monospace" fontSize="8" fill="#6e6c66" letterSpacing="1">DISPATCH</text>
+                <text x="180" y="300" fontFamily="ui-monospace,monospace" fontSize="8" fill="#6e6c66" letterSpacing="1">SOC</text>
+                <text x="372" y="218" fontFamily="ui-monospace,monospace" fontSize="8" fill="#6e6c66" letterSpacing="1">EXPORT</text>
+              </svg>
+              <div className="legend"><span><i style={{ background: "#34d399" }}></i>CONTROL</span><span><i style={{ background: "#fbbf24" }}></i>EXPORT</span></div>
+              <div className="scale">LATENCY &lt; 100 ms</div>
+            </div>
+          </div>
+
+          <div className="specs">
+            <div className="spec"><div className="v">&lt;100<span className="u">ms</span></div><div className="l">Dispatch response</div></div>
+            <div className="spec"><div className="v">1<span className="u">s</span></div><div className="l">Telemetry resolution</div></div>
+            <div className="spec"><div className="v">100<span className="u">%</span></div><div className="l">Grid-code compliance</div></div>
+            <div className="spec"><div className="v">N+1</div><div className="l">Controller redundancy</div></div>
           </div>
         </div>
       </section>
@@ -346,7 +518,7 @@ export default function Solutions() {
       
       <section className="process">
         <div className="wrap">
-          <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 06 — Delivery model</div>
+          <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 07 — Delivery model</div>
           <h2 className="h-1 reveal" style={{ maxWidth: "18ch" }}>From feasibility to handover, in <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>five sustained steps.</em></h2>
           <div className="process-steps">
             <div className="step reveal"><div className="id">STEP 01</div><h4>Origination & feasibility</h4><p>Site walk, irradiance / load study, grid availability, financial modelling.</p></div>

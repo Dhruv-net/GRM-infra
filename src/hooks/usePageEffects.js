@@ -95,6 +95,9 @@ export function usePageEffects(ref) {
         card.style.display = show ? '' : 'none'
         if (show) n++
       })
+      // Featured card highlights a BESS project — hide it unless the filter includes BESS
+      const featured = root.querySelector('.featured')
+      if (featured) featured.style.display = (f === 'all' || f === 'bess') ? '' : 'none'
       if (counter) counter.textContent = n
     }
     const chipHandlers = []

@@ -113,7 +113,7 @@ export default function Home() {
               </svg>
             </div>
             <h3>Utility-scale Solar</h3>
-            <p>Greenfield to grid: design, EPC, and commissioning of single-axis tracker plants from 20 MW to 1 GW.</p>
+            <p>Greenfield to grid: design, EPC, and commissioning of single-axis tracker plants from 5 MW to 1 GW.</p>
             <a href="solutions.html#solar" className="cap-link">Capability brief</a>
           </div>
           <div className="cap reveal">
@@ -134,23 +134,36 @@ export default function Home() {
             <a href="solutions.html#bess" className="cap-link">Capability brief</a>
           </div>
           <div className="cap reveal">
-            <div className="cap-num">03 / Cranes</div>
+            <div className="cap-num">03 / Wind Farm</div>
             <div className="cap-icon">
               <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <line x1="20" y1="58" x2="20" y2="10" stroke="#34d399" strokeWidth="1.4"/>
-                <line x1="20" y1="10" x2="56" y2="6" stroke="#34d399" strokeWidth="1.4"/>
-                <line x1="20" y1="14" x2="56" y2="10" stroke="#34d399" strokeWidth="1.4"/>
-                <line x1="20" y1="10" x2="20" y2="14" stroke="#34d399" strokeWidth="1.4"/>
-                <line x1="56" y1="6" x2="56" y2="10" stroke="#34d399" strokeWidth="1.4"/>
-                <line x1="44" y1="8" x2="44" y2="22" stroke="#34d399" strokeWidth="1"/>
-                <rect x="40" y="22" width="8" height="6" stroke="#34d399" strokeWidth="1.2"/>
-                <line x1="14" y1="58" x2="26" y2="58" stroke="#34d399" strokeWidth="1.4"/>
-                <path d="M22 24 L18 30 M22 34 L18 40 M22 44 L18 50" stroke="#34d399" strokeWidth=".8"/>
+                <line x1="32" y1="58" x2="32" y2="34" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="26" y1="58" x2="38" y2="58" stroke="#34d399" strokeWidth="1.4"/>
+                <circle cx="32" cy="30" r="3" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="32" y1="27" x2="32" y2="9" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="34.6" y1="31.5" x2="50" y2="40" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="29.4" y1="31.5" x2="14" y2="40" stroke="#34d399" strokeWidth="1.4"/>
               </svg>
             </div>
-            <h3>Crane & Lifting Engineering</h3>
-            <p>Heavy-lift planning, rigging, and commissioning support — turbine erection, BESS placement, port handling.</p>
+            <h3>Wind Farm Infrastructure</h3>
+            <p>Full wind farm EPC — turbine erection, foundations, collector grid, and grid-ready commissioning.</p>
             <a href="solutions.html#cranes" className="cap-link">Capability brief</a>
+          </div>
+          <div className="cap reveal">
+            <div className="cap-num">04 / EPC</div>
+            <div className="cap-icon">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <path d="M16 42 a16 16 0 0 1 32 0" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="8" y1="42" x2="56" y2="42" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="29" y1="14" x2="35" y2="14" stroke="#34d399" strokeWidth="1.4"/>
+                <line x1="24" y1="26" x2="24" y2="42" stroke="#34d399" strokeWidth="1" opacity="0.6"/>
+                <line x1="32" y1="22" x2="32" y2="42" stroke="#34d399" strokeWidth="1" opacity="0.6"/>
+                <line x1="40" y1="26" x2="40" y2="42" stroke="#34d399" strokeWidth="1" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>EPC &amp; Construction</h3>
+            <p>Turnkey engineering, procurement, and construction with stringent QA/QC controls.</p>
+            <a href="solutions.html#epc" className="cap-link">Capability brief</a>
           </div>
         </div>
       </section>
@@ -192,7 +205,7 @@ export default function Home() {
         </div>
         <div className="rail-grid reveal">
           <a className="proj feature" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80" alt=""/></div>
+            <div className="proj-img"><img src="/projects/norwich.jpg" alt=""/></div>
             <div className="proj-meta">
               <span className="tag"><span className="green">●</span> BESS · 8 MW</span>
               <h3>Norwich storage block</h3>
@@ -200,7 +213,7 @@ export default function Home() {
             </div>
           </a>
           <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-img"><img src="/projects/yerbeston.jpg" alt=""/></div>
             <div className="proj-meta">
               <span className="tag"><span className="green">●</span> Solar · 6 MW</span>
               <h3>Yerbeston solar farm</h3>
@@ -216,7 +229,7 @@ export default function Home() {
             </div>
           </a>
           <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-img"><img src="/projects/cesis.jpg" alt=""/></div>
             <div className="proj-meta">
               <span className="tag"><span className="green">●</span> Solar · 3.8 MWp</span>
               <h3>Cēsis solar plant</h3>
@@ -224,7 +237,7 @@ export default function Home() {
             </div>
           </a>
           <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-img"><img src="/projects/algeria.jpg" alt=""/></div>
             <div className="proj-meta">
               <span className="tag"><span className="green">●</span> BESS · 5 MW</span>
               <h3>Algeria storage system</h3>

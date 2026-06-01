@@ -39,7 +39,7 @@
     top: 0; right: 0;
     width: 60%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80');
+    background-image: url('/projects/cesis.jpg');
     background-size: cover;
     background-position: center;
     mask-image: linear-gradient(to right, transparent 0%, #000 30%, #000 100%);
@@ -99,7 +99,7 @@
   /* CAPABILITIES =========================================== */
   .caps {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
     border-top: 1px solid var(--line-soft);
     border-bottom: 1px solid var(--line-soft);
@@ -223,6 +223,12 @@
   .cta-row { display: inline-flex; gap: 14px; }
 
   /* Tweaks panel toggle markers handled by tweaks-panel.jsx */
+
+  @media (min-width: 1001px) and (max-width: 1240px) {
+    .caps { grid-template-columns: 1fr 1fr; }
+    .cap:nth-child(2n) { border-right: 0; }
+    .cap:nth-child(n+3) { border-top: 1px solid var(--line-soft); }
+  }
 
   @media (max-width: 1000px) {
     .hero-inner { grid-template-columns: 1fr; }

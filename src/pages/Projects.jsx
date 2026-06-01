@@ -9,14 +9,13 @@ const PROJECTS = [
     title: 'Cēsis solar plant',
     sub: 'Latvia — CORAB mounting & pile driving · Jan 2025',
     corner: '2025',
-    img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/cesis.jpg',
     location: 'Cēsis, Latvia',
     completion: 'January 2025',
     scope: 'Full mechanical installation, including DC cable pulling and complete installation of the CORAB mounting system with pile driving using the GAYK HRE 3000.',
     stats: [
       { v: '3.8', u: 'MWp', l: 'Installed capacity' },
       { v: '4', u: 'wk', l: 'Delivery time' },
-      { v: '16', u: '', l: 'Engineers' },
       { v: 'Jan', u: '2025', l: 'Completion' },
     ],
     body: [
@@ -31,7 +30,7 @@ const PROJECTS = [
     title: 'Yerbeston solar farm',
     sub: 'United Kingdom — UK SOL panels · mechanical & DC · Nov 2025',
     corner: '2025',
-    img: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/yerbeston.jpg',
     location: 'Yerbeston, United Kingdom',
     completion: 'November 2025',
     scope: 'Complete mechanical installation, including DC cable pulling.',
@@ -52,14 +51,13 @@ const PROJECTS = [
     title: 'Ajmer solar plant',
     sub: 'Rajasthan, India — Tata Power Solar panels · Dec 2025',
     corner: '2025',
-    img: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/ajmer.jpg',
     location: 'Ajmer, Rajasthan, India',
     completion: 'December 2025',
     scope: 'Complete mechanical installation of the mounting structure system and pile driving works, with Tata Power Solar panels.',
     stats: [
       { v: '5', u: 'MW', l: 'Installed capacity' },
       { v: '5', u: 'wk', l: 'Delivery time' },
-      { v: '16', u: '', l: 'Engineers' },
       { v: 'Dec', u: '2025', l: 'Completion' },
     ],
     body: [
@@ -74,7 +72,7 @@ const PROJECTS = [
     title: 'Algeria storage system',
     sub: 'Algeria — lithium-ion · mechanical & electrical · Sept 2025',
     corner: '2025',
-    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/algeria.jpg',
     location: 'Algeria',
     completion: 'September 2025',
     scope: 'Complete mechanical and electrical installation of the Battery Energy Storage System (BESS), including battery containers, inverter systems, integration works, and commissioning support.',
@@ -96,7 +94,7 @@ const PROJECTS = [
     title: 'Norwich storage block',
     sub: 'United Kingdom — turnkey delivery · Dec 2025',
     corner: '2025',
-    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/norwich.jpg',
     location: 'Norwich, United Kingdom',
     completion: 'December 2025',
     scope: 'Turnkey delivery including project design, engineering analysis, civil coordination, equipment installation, electrical integration, control system setup, performance testing, and final commissioning support.',
@@ -141,7 +139,7 @@ const PROJECTS = [
     title: 'Sigurd wind turbine',
     sub: 'Orkney, United Kingdom — Class I turbine · 1,159 UK homes equivalent',
     corner: '2017',
-    img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/sigurd.jpg',
     location: 'Burgar Hill, Orkney, United Kingdom',
     completion: 'Operational since 2017',
     scope: 'High-performance Class I turbine with a major blade replacement programme and circular-economy reuse of original blades.',
@@ -318,7 +316,7 @@ export default function Projects() {
               {selected.scope && (
                 <p className="proj-modal-scope"><strong>Scope of services:</strong> {selected.scope}</p>
               )}
-              <div className="proj-modal-stats">
+              <div className="proj-modal-stats" style={selected.stats.length < 4 ? { gridTemplateColumns: `repeat(${selected.stats.length}, 1fr)` } : undefined}>
                 {selected.stats.map((s, i) => (
                   <div key={i}>
                     <div className="v">{s.v}{s.u && <span className="u">{s.u}</span>}</div>
