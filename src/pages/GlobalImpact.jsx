@@ -47,7 +47,7 @@ export default function GlobalImpact() {
             <div className="delta">↑ 4×  vs FY24</div>
           </div>
           <div className="tn reveal">
-            <div className="v"><span data-count="14" data-decimals="0">0</span></div>
+            <div className="v"><span data-count="7" data-decimals="0">0</span></div>
             <div className="l">Active markets</div>
             <div className="delta">+3 in FY25</div>
           </div>
@@ -67,7 +67,7 @@ export default function GlobalImpact() {
                 <span className="grid-sync-val">99.97% uptime</span>
               </div>
             </div>
-            <p className="reveal">GRM's regional teams operate within a day's travel of every active site. Engineering, supply chain, and field crews on the ground where the project lives — not in a head office a continent away.</p>
+            <p className="reveal">Deep regional expertise, local execution, and operational oversight embedded across every stage of the asset lifecycle</p>
           </div>
       
           <div className="mapcontainer reveal">
@@ -184,20 +184,7 @@ export default function GlobalImpact() {
             </svg>
           </div>
       
-          <div className="markets reveal">
-            <div className="market"><div className="flag">IN</div><h4>India</h4><div className="stat">Solar <b>880 MW</b></div><div className="stat">BESS <b>320 MWh</b></div><div className="stat">Lifts <b>1,800+</b></div></div>
-            <div className="market"><div className="flag">AE</div><h4>UAE</h4><div className="stat">Solar <b>120 MW</b></div><div className="stat">BESS <b>180 MWh</b></div><div className="stat">Lifts <b>140</b></div></div>
-            <div className="market"><div className="flag">SA</div><h4>Saudi Arabia</h4><div className="stat">Solar <b>200 MW</b></div><div className="stat">BESS <b>40 MWh</b></div><div className="stat">Lifts <b>90</b></div></div>
-            <div className="market"><div className="flag">VN</div><h4>Vietnam</h4><div className="stat">Solar <b>80 MW</b></div><div className="stat">BESS <b>—</b></div><div className="stat">Lifts <b>60</b></div></div>
-            <div className="market"><div className="flag">PH</div><h4>Philippines</h4><div className="stat">Solar <b>40 MW</b></div><div className="stat">BESS <b>20 MWh</b></div><div className="stat">Lifts <b>32</b></div></div>
-            <div className="market"><div className="flag">KE</div><h4>Kenya</h4><div className="stat">Solar <b>30 MW</b></div><div className="stat">BESS <b>10 MWh</b></div><div className="stat">Lifts <b>18</b></div></div>
-            <div className="market"><div className="flag">ZA</div><h4>South Africa</h4><div className="stat">Solar <b>60 MW</b></div><div className="stat">BESS <b>30 MWh</b></div><div className="stat">Lifts <b>40</b></div></div>
-            <div className="market"><div className="flag">ES</div><h4>Spain</h4><div className="stat">Solar <b>—</b></div><div className="stat">BESS <b>60 MWh</b></div><div className="stat">Lifts <b>22</b></div></div>
-            <div className="market"><div className="flag">AU</div><h4>Australia</h4><div className="stat">Solar <b>50 MW</b></div><div className="stat">BESS <b>120 MWh</b></div><div className="stat">Lifts <b>50</b></div></div>
-            <div className="market"><div className="flag">CL</div><h4>Chile</h4><div className="stat">Solar <b>40 MW</b></div><div className="stat">BESS <b>—</b></div><div className="stat">Lifts <b>14</b></div></div>
-            <div className="market"><div className="flag">EG</div><h4>Egypt</h4><div className="stat">Solar <b>100 MW</b></div><div className="stat">BESS <b>—</b></div><div className="stat">Lifts <b>34</b></div></div>
-            <div className="market"><div className="flag">+3</div><h4>Pre-development</h4><div className="stat">Brazil <b>·</b> Oman <b>·</b> Indonesia</div></div>
-          </div>
+
         </div>
       </section>
       
@@ -232,12 +219,12 @@ export default function GlobalImpact() {
             <div>
               <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 03 — Aligned to</div>
               <h2 className="h-1 reveal" style={{ maxWidth: "14ch" }}>Three goals that <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>define the work.</em></h2>
-              <p className="lede reveal" style={{ marginTop: "28px" }}>We commit to the UN SDGs that infrastructure work can actually move — affordable energy, decent work, and climate action. The other 14 are someone else's job.</p>
+              <p className="lede reveal" style={{ marginTop: "28px" }}>Our commitment to the UN Sustainable Development Goals is reflected in every project we develop, from clean energy generation to job creation and climate action.</p>
             </div>
             <div className="sdg-cards">
-              <div className="sdg-card reveal card-tilt"><div className="num">SDG 07</div><h4>Affordable & Clean Energy</h4><p>1.4 GW of solar in pipeline replaces ~3.2 Mt of coal-fired generation per year.</p></div>
-              <div className="sdg-card reveal card-tilt"><div className="num">SDG 08</div><h4>Decent Work & Growth</h4><p>3,200 site jobs across 14 markets; 60% local hire commitment per project.</p></div>
-              <div className="sdg-card reveal card-tilt"><div className="num">SDG 13</div><h4>Climate Action</h4><p>2.1 Mt CO₂ avoided / yr — equivalent to taking 460,000 cars off the road.</p></div>
+              <div className="sdg-card reveal card-tilt"><div className="num">SDG 07</div><h4>Affordable & Clean Energy</h4><p>1.4 GW of renewable energy projects in the pipeline, supporting the transition to a lower-carbon energy system.</p></div>
+              <div className="sdg-card reveal card-tilt"><div className="num">SDG 08</div><h4>Decent Work & Growth</h4><p>90+ site jobs across 7 markets, supporting local employment and economic development.</p></div>
+              {/* <div className="sdg-card reveal card-tilt"><div className="num">SDG 13</div><h4>Climate Action</h4><p>2.1 Mt CO₂ avoided / yr — equivalent to taking 460,000 cars off the road.</p></div> */}
             </div>
           </div>
         </div>
@@ -296,9 +283,9 @@ export default function GlobalImpact() {
               <span style={{ fontWeight: "600", letterSpacing: "0.18em" }}>GRM<span style={{ fontWeight: "300", color: "var(--bone-dim)", marginLeft: "4px" }}>INFRA</span></span>
             </div>
             <div className="footer-tag">Steady delivery<br/>for the energy<br/>transition.</div>
-            <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRASTRUCTURE PVT. LTD.<br/>HQ — Hyderabad, India</div>
+            <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRA LTD<br/>HQ- WATFORD UNITED KINGDOM</div>
           </div>
-          <div><h5>Company</h5><ul><li><a href="about.html">About us</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="projects.html">Projects</a></li><li><a href="#">Careers</a></li></ul></div>
+          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#">Careers</a></li></ul></div>
           <div><h5>Connect</h5><ul><li><a href="mailto:info@infragrm.com">info@infragrm.com</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Newsletter</a></li></ul></div>
         </div>
         <div className="footer-bottom">

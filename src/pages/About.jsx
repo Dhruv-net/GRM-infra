@@ -1,6 +1,31 @@
 import { useRef } from 'react'
 import { usePageEffects } from '../hooks/usePageEffects'
 
+const CERTS = [
+  { img: '/certifications/iso-9001.svg', alt: 'ISO 9001', desc: ['Quality', 'Management'] },
+  { img: '/certifications/iso-14001.svg', alt: 'ISO 14001', desc: ['Environmental', 'Management'] },
+  { img: '/certifications/iso-45001.svg', alt: 'ISO 45001', desc: ['Occupational', 'Health & Safety'] },
+  { img: '/certifications/iecre.svg', alt: 'IECRE', desc: ['PV plant', 'certification'] },
+  { img: '/certifications/leea.svg', alt: 'LEEA', desc: ['Lifting Equipment', 'Engineers Assoc.'] },
+  { img: '/certifications/cdm-2015.svg', alt: 'CDM 2015', desc: ['Construction', 'Compliance'] },
+  { img: '/certifications/CHAS.jpeg', alt: 'CHAS', desc: ['CHAS'] },
+  { img: '/certifications/CONSTRUCTION%20LINE%20GOLD.jpeg', alt: 'Construction Line Gold', desc: ['Construction', 'Line Gold'] },
+  { img: '/certifications/PQS.jpeg', alt: 'PQS', desc: ['PQS'] },
+  { img: '/certifications/RICS.jpeg', alt: 'RICS', desc: ['RICS'] },
+  { img: '/certifications/what-is-mcs.webp', alt: 'MCS', desc: ['MCS', 'Certified'] },
+]
+
+function CertCard({ c }) {
+  return (
+    <div className="cert">
+      {c.img
+        ? <img src={c.img} alt={c.alt} />
+        : <div className="id">{c.id}</div>}
+      <div className="desc">{c.desc.map((line, i) => <span key={i}>{i > 0 && <br/>}{line}</span>)}</div>
+    </div>
+  )
+}
+
 export default function About() {
   const ref = useRef(null)
   usePageEffects(ref)
@@ -103,12 +128,12 @@ export default function About() {
         </div>
       </section>
       
-      <div className="quote-block">
+      {/* <div className="quote-block">
         <blockquote className="reveal">We don't sell the energy transition. We pour the foundations for it, lift the steel, and hand someone the keys.</blockquote>
         <div className="attr reveal">— R. Mehta, Founder & Managing Director</div>
-      </div>
+      </div> */}
       
-      <section className="section-pad wrap">
+      {/* <section className="section-pad wrap">
         <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 03 — Leadership</div>
         <h2 className="h-2 reveal" style={{ marginBottom: "56px", maxWidth: "22ch" }}>A working leadership. Nobody runs the firm from a desk.</h2>
       
@@ -146,10 +171,10 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
-      <section className="section-pad wrap">
-        <div className="eyebrow reveal" style={{ marginBottom: "56px" }}>// 04 — The team, in numbers</div>
+      {/* <section className="section-pad wrap">
+        <div className="eyebrow reveal" style={{ marginBottom: "56px" }}>// 03 — The team, in numbers</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}>
           <div style={{ padding: "56px 32px", borderRight: "1px solid var(--line-soft)" }} className="reveal">
             <div style={{ fontSize: "clamp(48px, 5vw, 76px)", fontWeight: "300", letterSpacing: "-0.04em", lineHeight: "1" }}><span data-count="780">0</span></div>
@@ -168,19 +193,17 @@ export default function About() {
             <div style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--bone-mute)", marginTop: "12px" }}>LTIs in 2025</div>
           </div>
         </div>
-      </section>
+      </section> */}
       
       <section>
         <div className="wrap" style={{ marginBottom: "32px" }}>
-          <div className="eyebrow">// 05 — Certifications</div>
+          <div className="eyebrow">// 03 — Certifications</div>
         </div>
-        <div className="certs">
-          <div className="cert"><div className="id">ISO 9001</div><div className="desc">Quality<br/>Management</div></div>
-          <div className="cert"><div className="id">ISO 14001</div><div className="desc">Environmental<br/>Management</div></div>
-          <div className="cert"><div className="id">ISO 45001</div><div className="desc">Occupational<br/>Health & Safety</div></div>
-          <div className="cert"><div className="id">IECRE</div><div className="desc">PV plant<br/>certification</div></div>
-          <div className="cert"><div className="id">LEEA</div><div className="desc">Lifting Equipment<br/>Engineers Assoc.</div></div>
-          <div className="cert"><div className="id">CDM 2015</div><div className="desc">Construction<br/>Compliance</div></div>
+        <div className="cert-slider">
+          <div className="cert-track">
+            {CERTS.map((c, i) => <CertCard key={i} c={c} />)}
+            {CERTS.map((c, i) => <CertCard key={`dup-${i}`} c={c} />)}
+          </div>
         </div>
       </section>
       
@@ -202,9 +225,9 @@ export default function About() {
               <span style={{ fontWeight: "600", letterSpacing: "0.18em" }}>GRM<span style={{ fontWeight: "300", color: "var(--bone-dim)", marginLeft: "4px" }}>INFRA</span></span>
             </div>
             <div className="footer-tag">Steady delivery<br/>for the energy<br/>transition.</div>
-            <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRASTRUCTURE PVT. LTD.<br/>HQ — Hyderabad, India</div>
+            <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRA LTD<br/>HQ- WATFORD UNITED KINGDOM</div>
           </div>
-          <div><h5>Company</h5><ul><li><a href="about.html">About us</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="projects.html">Projects</a></li><li><a href="#">Careers</a></li></ul></div>
+          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#">Careers</a></li></ul></div>
           <div><h5>Connect</h5><ul><li><a href="mailto:info@infragrm.com">info@infragrm.com</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Newsletter</a></li></ul></div>
         </div>
         <div className="footer-bottom">

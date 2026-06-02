@@ -55,11 +55,17 @@
   .quote-block blockquote::after { content: "\201D"; color: var(--green); }
   .quote-block .attr { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone-mute); margin-top: 28px; max-width: 1100px; margin-left: auto; margin-right: auto; }
 
-  .certs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
-  .cert { padding: 36px 24px; border-right: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; aspect-ratio: 1.4; }
-  .cert:last-child { border-right: 0; }
-  .cert .id { font-family: var(--sans); font-size: 18px; font-weight: 500; letter-spacing: -0.01em; }
+  .cert-slider { overflow: hidden; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); position: relative; }
+  .cert-slider::before, .cert-slider::after { content: ""; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+  .cert-slider::before { left: 0; background: linear-gradient(90deg, var(--ink), transparent); }
+  .cert-slider::after { right: 0; background: linear-gradient(270deg, var(--ink), transparent); }
+  .cert-track { display: flex; width: max-content; animation: cert-scroll 40s linear infinite; }
+  .cert-slider:hover .cert-track { animation-play-state: paused; }
+  @keyframes cert-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .cert { flex: 0 0 240px; padding: 36px 24px; border-right: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; aspect-ratio: 1.4; }
+  .cert .id { font-family: var(--sans); font-size: 18px; font-weight: 400 !important; letter-spacing: -0.01em; color: #fff; }
   .cert .desc { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone-mute); text-align: center; }
+  .cert img { height: 60px; width: auto; max-width: 100%; object-fit: contain; background: #fff; padding: 8px 12px; border-radius: var(--r-sm); }
 
   @media (max-width: 1000px) {
     .about-hero .wrap { grid-template-columns: 1fr; }
@@ -68,6 +74,5 @@
     .story-grid { grid-template-columns: 1fr; gap: 40px; }
     .timeline { grid-template-columns: 1fr; gap: 8px; }
     .leaders { grid-template-columns: 1fr 1fr; }
-    .certs { grid-template-columns: 1fr 1fr 1fr; }
-    .cert:nth-child(3n) { border-right: 0; }
+    .cert { flex-basis: 180px; }
   }
