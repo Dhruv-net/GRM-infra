@@ -215,7 +215,7 @@ export default function Home() {
             </div>
           </a>
           <a className="proj" href="projects.html">
-            <div className="proj-img"><img src="https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=900&q=80" alt=""/></div>
+            <div className="proj-img"><img src="/projects/crossford.jpeg" alt="Crossford wind farm"/></div>
             <div className="proj-meta">
               <span className="tag"><span className="green">●</span> Wind · 1.5 MW</span>
               <h3>Crossford wind farm</h3>

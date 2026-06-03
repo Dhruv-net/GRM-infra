@@ -117,7 +117,7 @@ const PROJECTS = [
     title: 'Crossford wind farm',
     sub: 'Operational since 2022 · 2.7 GWh annual output',
     corner: '2022',
-    img: 'https://images.unsplash.com/photo-1571781565036-d3f759be73e4?auto=format&fit=crop&w=1600&q=80',
+    img: '/projects/crossford.jpeg',
     location: 'United Kingdom',
     completion: 'Operational since 2022',
     scope: 'On-site renewable generation with grid export and a community benefit programme.',
@@ -270,7 +270,7 @@ export default function Projects() {
         <div className="wrap">
           <div className="case-grid">
             <div className="case-image reveal">
-              <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1600&q=80" alt=""/>
+              <img src="/projects/crossford.jpeg" alt="Crossford wind farm"/>
             </div>
             <div className="case-body reveal">
               <div className="eyebrow" style={{ marginBottom: "22px" }}>CASE STUDY · 01</div>
