@@ -17,6 +17,7 @@
   .tn { padding: 56px 36px; border-right: 1px solid var(--line-soft); }
   .tn:last-child { border-right: 0; }
   .tn .v { font-size: clamp(56px, 7vw, 96px); font-weight: 300; letter-spacing: -0.04em; line-height: 0.95; }
+  .theme-light .tn .v, .theme-light .tn .v .u { color: #34d399; }
   .tn .v .u { font-size: 0.32em; color: var(--green); margin-left: 6px; letter-spacing: 0; }
   .tn .l { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone-mute); margin-top: 16px; }
   .tn .delta { font-family: var(--mono); font-size: 11px; color: var(--green); margin-top: 8px; }

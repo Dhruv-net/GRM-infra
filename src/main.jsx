@@ -6,6 +6,7 @@ import About from './pages/About'
 import Solutions from './pages/Solutions'
 import Projects from './pages/Projects'
 import GlobalImpact from './pages/GlobalImpact'
+import Loader from './components/Loader'
 import './index.css'
 
 // On navigation: scroll to a hash target if present, otherwise to the top.
@@ -27,8 +28,13 @@ function ScrollManager() {
 }
 
 function App() {
+  // Show the video loader only when the app boots (hard refresh / first open),
+  // NOT on client-side route changes — the app stays mounted between pages.
+  const [loading, setLoading] = React.useState(true)
+
   return (
     <BrowserRouter>
+      {loading && <Loader duration={2000} onFinish={() => setLoading(false)} />}
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />

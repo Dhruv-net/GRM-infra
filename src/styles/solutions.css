@@ -1,3 +1,6 @@
+/* Solutions light sections: make grey/muted text black for readability */
+.sol.theme-light { --bone-mute: #000; --bone-dim: #000; }
+
 .sol-hero { padding: 180px var(--pad-x) 80px; position: relative; overflow: hidden; }
   .sol-hero::before {
     content: ""; position: absolute; inset: 0;

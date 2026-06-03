@@ -171,7 +171,7 @@ export default function Home() {
       </div>
       
       
-      <section className="section-pad wrap">
+      <section className="section-pad wrap theme-light">
         <div className="manifesto">
           <div>
             <div className="eyebrow reveal" style={{ marginBottom: "28px" }}>// 01 — Manifesto</div>
@@ -242,7 +242,7 @@ export default function Home() {
       </section>
       
       
-      <section className="globe-strip" id="footprint">
+      <section className="globe-strip theme-light" id="footprint">
         <div className="globe-grid">
           <div className="reveal">
             <div className="eyebrow" style={{ marginBottom: "22px" }}>// 03 — Global footprint</div>
@@ -256,7 +256,7 @@ export default function Home() {
             </div>
           </div>
           <div className="globe-stats reveal">
-            <div className="stat"><div className="n"><span data-count="1.4" data-decimals="1">0</span><span className="unit">GW</span></div><div className="l">Solar in pipeline</div></div>
+            <div className="stat"><div className="n"><span data-count="1.4" data-decimals="1">0</span><span className="unit">GW</span></div><div className="l">Renewable projects in pipeline</div></div>
             <div className="stat"><div className="n"><span data-count="620" data-decimals="0">0</span><span className="unit">MWh</span></div><div className="l">Storage commissioned</div></div>
             <div className="stat"><div className="n"><span data-count="7" data-decimals="0">0</span></div><div className="l">Active markets</div></div>
             <div className="stat"><div className="n"><span data-count="2.1" data-decimals="1">0</span><span className="unit">Mt</span></div><div className="l">CO₂ avoided / yr</div></div>
@@ -293,8 +293,6 @@ export default function Home() {
               <li><a href="solutions.html">Solutions</a></li>
               <li><a href="projects.html">Projects</a></li>
               <li><a href="global-impact.html">Global impact</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
             </ul>
           </div>
           <div>

@@ -62,10 +62,10 @@
   .cert-track { display: flex; width: max-content; animation: cert-scroll 40s linear infinite; }
   .cert-slider:hover .cert-track { animation-play-state: paused; }
   @keyframes cert-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .cert { flex: 0 0 240px; padding: 36px 24px; border-right: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; aspect-ratio: 1.4; }
+  .cert { flex: 0 0 300px; padding: 40px 28px; border-right: 1px solid var(--line-soft); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; aspect-ratio: 1.4; }
   .cert .id { font-family: var(--sans); font-size: 18px; font-weight: 400 !important; letter-spacing: -0.01em; color: #fff; }
-  .cert .desc { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone-mute); text-align: center; }
-  .cert img { height: 60px; width: auto; max-width: 100%; object-fit: contain; background: #fff; padding: 8px 12px; border-radius: var(--r-sm); }
+  .cert .desc { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); text-align: center; }
+  .cert img { height: 100px; width: auto; max-width: 100%; object-fit: contain; background: #fff; padding: 10px 16px; border-radius: var(--r-sm); }
 
   @media (max-width: 1000px) {
     .about-hero .wrap { grid-template-columns: 1fr; }
@@ -74,5 +74,6 @@
     .story-grid { grid-template-columns: 1fr; gap: 40px; }
     .timeline { grid-template-columns: 1fr; gap: 8px; }
     .leaders { grid-template-columns: 1fr 1fr; }
-    .cert { flex-basis: 180px; }
+    .cert { flex-basis: 220px; }
+    .cert img { height: 80px; }
   }

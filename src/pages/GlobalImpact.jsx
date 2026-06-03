@@ -1,9 +1,52 @@
-import { useRef } from 'react'
+import { useRef, useMemo } from 'react'
+import { geoMercator, geoPath } from 'd3-geo'
+import { feature } from 'topojson-client'
+import worldGeo from 'world-atlas/countries-110m.json'
 import { usePageEffects } from '../hooks/usePageEffects'
+
+// Brand colours by practice
+const SOLAR = '#60a5fa'
+const BESS = '#fbbf24'
+const WIND = '#ffffff'
+
+// Map frame (matches the svg viewBox)
+const MAP_W = 1200
+const MAP_H = 540
+
+// Real project sites — [longitude, latitude]. dx/dy = label offset from the dot,
+// ddx/ddy = small nudge of the dot itself to keep tight clusters legible.
+const SITES = [
+  // United Kingdom
+  { name: 'ORKNEY', coords: [-2.96, 58.98], color: WIND, dx: 9, dy: 3, anchor: 'start' },
+  { name: 'CROSSFORD', coords: [-3.74, 55.62], color: WIND, dx: -9, dy: 3, anchor: 'end' },
+  { name: 'NORWICH', coords: [1.30, 52.63], color: BESS, dx: 9, dy: 3, anchor: 'start', ddx: 2, ddy: -13 },
+  { name: 'HEREFORD', coords: [-2.72, 52.06], color: SOLAR, dx: -9, dy: 3, anchor: 'end', ddy: -8 },
+  { name: 'NEWPORT', coords: [-3.00, 51.59], color: BESS, dx: -9, dy: 3, anchor: 'end', ddy: 6 },
+  { name: 'YERBESTON', coords: [-4.79, 51.73], color: SOLAR, dx: -9, dy: 3, anchor: 'end', ddx: -2, ddy: 20 },
+  // Latvia
+  { name: 'CĒSIS', coords: [25.27, 57.31], color: SOLAR, dx: 9, dy: 3, anchor: 'start', ddy: 8 },
+  { name: 'VALMIERA', coords: [25.42, 57.54], color: SOLAR, dx: 9, dy: 3, anchor: 'start', ddy: -9 },
+  // Algeria
+  { name: 'ALGIERS', coords: [3.06, 36.75], color: BESS, dx: 9, dy: 2, anchor: 'start' },
+  { name: 'ORAN', coords: [-0.64, 35.70], color: BESS, dx: -9, dy: 13, anchor: 'end' },
+  // India
+  { name: 'AJMER', coords: [74.64, 26.45], color: SOLAR, dx: -9, dy: 2, anchor: 'end' },
+  { name: 'GWALIOR', coords: [78.18, 26.22], color: SOLAR, dx: 9, dy: 0, anchor: 'start' },
+  { name: 'BHOPAL', coords: [77.41, 23.26], color: SOLAR, dx: 9, dy: 4, anchor: 'start' },
+]
 
 export default function GlobalImpact() {
   const ref = useRef(null)
   usePageEffects(ref)
+
+  // Real world map, fitted so all sites (UK → India) sit inside the frame.
+  const { countryPaths, project } = useMemo(() => {
+    const proj = geoMercator().center([36.7, 44.87]).scale(347).translate([MAP_W / 2, MAP_H / 2])
+    const pathGen = geoPath(proj)
+    const land = feature(worldGeo, worldGeo.objects.countries).features
+    return { countryPaths: land.map((f) => pathGen(f)), project: proj }
+  }, [])
+
   return (
     <div ref={ref}>
       <header className="nav">
@@ -29,7 +72,7 @@ export default function GlobalImpact() {
         </div>
       </section>
       
-      <section>
+      <section className="theme-light">
         <div className="topnumbers">
           <div className="tn reveal">
             <div className="v"><span data-count="2.1" data-decimals="1">0</span><span className="u">Mt</span></div>
@@ -38,7 +81,7 @@ export default function GlobalImpact() {
           </div>
           <div className="tn reveal">
             <div className="v"><span data-count="1.4" data-decimals="1">0</span><span className="u">GW</span></div>
-            <div className="l">Solar in pipeline</div>
+            <div className="l">Renewable projects in pipeline</div>
             <div className="delta">↑ 22% vs FY24</div>
           </div>
           <div className="tn reveal">
@@ -73,114 +116,28 @@ export default function GlobalImpact() {
           <div className="mapcontainer reveal">
             <div className="ml-label">MAP — ACTIVE MARKETS · 05.2026</div>
             <div className="ml-legend">
-              <span><i style={{ background: "#34d399" }}></i>Solar</span>
-              <span><i style={{ background: "#60a5fa" }}></i>BESS</span>
-              <span><i style={{ background: "#fbbf24" }}></i>Lifting</span>
+              <span><i style={{ background: "#60a5fa" }}></i>Solar</span>
+              <span><i style={{ background: "#fbbf24" }}></i>BESS</span>
+              <span><i style={{ background: "#ffffff" }}></i>Wind</span>
             </div>
-            <svg viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet">
-              
-              <g fill="#1c1c1c" stroke="#2a2a2a" strokeWidth="0.6">
-                
-                <path d="M120 110 Q90 130 95 180 Q100 230 130 260 Q160 280 200 270 Q240 240 250 200 L260 160 Q270 130 250 110 Q220 90 180 95 Q145 100 120 110 Z"/>
-                
-                <path d="M260 280 Q250 320 270 380 Q280 430 305 460 Q325 480 340 460 Q355 420 350 380 Q345 340 335 310 Q320 285 295 280 Q275 278 260 280 Z"/>
-                
-                <path d="M540 130 Q525 145 530 175 Q540 200 565 210 Q600 215 620 200 Q635 180 630 155 Q615 135 590 128 Q560 124 540 130 Z"/>
-                
-                <path d="M555 220 Q540 250 555 290 Q570 340 605 365 Q635 380 655 360 Q670 320 660 280 Q650 240 625 220 Q590 210 555 220 Z"/>
-                
-                <path d="M650 130 Q635 155 645 195 Q665 215 700 220 L755 222 Q800 218 840 215 Q900 218 950 220 Q985 220 1010 200 Q1020 175 1000 145 Q950 125 900 122 Q850 120 800 122 Q740 124 695 128 Q670 128 650 130 Z"/>
-                
-                <path d="M755 222 Q745 250 755 285 Q770 305 790 295 Q800 270 795 245 Q780 225 755 222 Z"/>
-                
-                <path d="M945 360 Q925 375 935 405 Q955 425 1000 425 Q1040 420 1050 400 Q1045 375 1010 365 Q975 358 945 360 Z"/>
+            <svg viewBox={`0 0 ${MAP_W} ${MAP_H}`} preserveAspectRatio="xMidYMid meet">
+              {/* Real-world land masses */}
+              <g fill="#1c1c1c" stroke="#2a2a2a" strokeWidth="0.5">
+                {countryPaths.map((d, i) => <path key={i} d={d} />)}
               </g>
-              
-              <g stroke="#222" strokeWidth=".4" fill="none" opacity=".6">
-                <path d="M0 100 L1200 100 M0 200 L1200 200 M0 300 L1200 300 M0 400 L1200 400"/>
-                <path d="M200 0 L200 540 M400 0 L400 540 M600 0 L600 540 M800 0 L800 540 M1000 0 L1000 540"/>
-              </g>
-      
-              
-              <g className="pin" transform="translate(782 260)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#34d399" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="6" fill="#34d399"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="10" fill="#f5f3ee" letterSpacing="1">HYDERABAD · HQ</text>
-              </g>
-              <g className="pin" transform="translate(770 240)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#34d399" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="4" fill="#34d399"/>
-                <text x="-90" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">RAJASTHAN</text>
-              </g>
-              <g className="pin" transform="translate(760 270)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#fbbf24" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="4" fill="#fbbf24"/>
-              </g>
-              <g className="pin" transform="translate(795 270)">
-                <circle className="core" cx="0" cy="0" r="4" fill="#60a5fa"/>
-              </g>
-              
-              <g className="pin" transform="translate(880 290)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#34d399" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="5" fill="#34d399"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">VIETNAM</text>
-              </g>
-              <g className="pin" transform="translate(910 320)">
-                <circle className="core" cx="0" cy="0" r="4" fill="#34d399"/>
-                <text x="-12" y="-10" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">PH</text>
-              </g>
-              
-              <g className="pin" transform="translate(660 220)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#60a5fa" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="5" fill="#60a5fa"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">UAE</text>
-              </g>
-              <g className="pin" transform="translate(635 230)">
-                <circle className="core" cx="0" cy="0" r="4" fill="#34d399"/>
-                <text x="-50" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">SAUDI</text>
-              </g>
-              
-              <g className="pin" transform="translate(605 320)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#34d399" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="4" fill="#34d399"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">KENYA</text>
-              </g>
-              <g className="pin" transform="translate(595 365)">
-                <circle className="core" cx="0" cy="0" r="4" fill="#34d399"/>
-                <text x="-32" y="14" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">SA</text>
-              </g>
-              
-              <g className="pin" transform="translate(580 170)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#60a5fa" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="4" fill="#60a5fa"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">SPAIN</text>
-              </g>
-              <g className="pin" transform="translate(610 175)">
-                <circle className="core" cx="0" cy="0" r="4" fill="#fbbf24"/>
-              </g>
-              
-              <g className="pin" transform="translate(990 395)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#34d399" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="5" fill="#34d399"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">NEW SOUTH WALES</text>
-              </g>
-              <g className="pin" transform="translate(960 405)">
-                <circle className="core" cx="0" cy="0" r="4" fill="#60a5fa"/>
-              </g>
-              
-              <g className="pin" transform="translate(310 380)">
-                <circle className="pulse" cx="0" cy="0" r="3" fill="none" stroke="#34d399" strokeWidth="1.4"/>
-                <circle className="core" cx="0" cy="0" r="4" fill="#34d399"/>
-                <text x="14" y="4" fontFamily="ui-monospace,monospace" fontSize="9" fill="#b8b6af" letterSpacing="1">CHILE</text>
-              </g>
-      
-              
-              <g stroke="#34d399" strokeWidth=".6" strokeDasharray="2 4" fill="none" opacity=".4">
-                <path d="M782 260 Q830 240 880 290"/>
-                <path d="M782 260 Q720 220 660 220"/>
-                <path d="M782 260 Q860 320 990 395"/>
-                <path d="M782 260 Q500 320 310 380"/>
-              </g>
+
+              {/* Project sites — dot + its own label */}
+              {SITES.map((s) => {
+                const [px, py] = project(s.coords)
+                const x = px + (s.ddx || 0)
+                const y = py + (s.ddy || 0)
+                return (
+                  <g key={s.name}>
+                    <circle cx={x} cy={y} r="4" fill={s.color} stroke="#0a0a0a" strokeWidth="0.8" />
+                    <text x={x + s.dx} y={y + s.dy} textAnchor={s.anchor} fontFamily="ui-monospace,monospace" fontSize="11" fill="#e6e4dd" letterSpacing=".5">{s.name}</text>
+                  </g>
+                )
+              })}
             </svg>
           </div>
       
@@ -189,7 +146,7 @@ export default function GlobalImpact() {
       </section>
       
       
-      <section className="chart">
+      <section className="chart theme-light">
         <div className="wrap">
           <div className="chart-grid">
             <div>
@@ -231,7 +188,7 @@ export default function GlobalImpact() {
       </section>
       
       
-      <section className="community">
+      <section className="community theme-light">
         <div className="wrap">
           <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 04 — Beyond the asset</div>
           <h2 className="h-1 reveal" style={{ maxWidth: "18ch" }}>Communities <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>stay</em> when the<br/>contractors leave.</h2>
@@ -285,7 +242,7 @@ export default function GlobalImpact() {
             <div className="footer-tag">Steady delivery<br/>for the energy<br/>transition.</div>
             <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRA LTD<br/>HQ- WATFORD UNITED KINGDOM</div>
           </div>
-          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#">Careers</a></li></ul></div>
+          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#"></a></li></ul></div>
           <div><h5>Connect</h5><ul><li><a href="mailto:info@infragrm.com">info@infragrm.com</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Newsletter</a></li></ul></div>
         </div>
         <div className="footer-bottom">

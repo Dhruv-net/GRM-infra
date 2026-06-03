@@ -58,7 +58,7 @@ export default function About() {
         </div>
       </section>
       
-      <section>
+      <section className="theme-light">
         <div className="principles">
           <div className="principle reveal">
             <div className="num">P/01</div>
@@ -94,7 +94,7 @@ export default function About() {
       
       <div className="divider"></div>
       
-      <section className="section-pad wrap">
+      <section className="section-pad wrap theme-light">
         <div className="eyebrow reveal" style={{ marginBottom: "36px" }}>// 02 — Milestones</div>
         <h2 className="h-2 reveal" style={{ marginBottom: "56px", maxWidth: "18ch" }}>Twelve years, plotted as deliverables.</h2>
       
@@ -196,7 +196,7 @@ export default function About() {
       </section> */}
       
       <section>
-        <div className="wrap" style={{ marginBottom: "32px" }}>
+        <div style={{ marginTop: "80px", marginBottom: "32px", padding: "0 var(--pad-x)" }}>
           <div className="eyebrow">// 03 — Certifications</div>
         </div>
         <div className="cert-slider">
@@ -208,7 +208,6 @@ export default function About() {
       </section>
       
       <section className="cta">
-        <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>Hiring across all practices</div>
         <h2 className="h-display reveal" style={{ fontSize: "clamp(40px,6vw,96px)" }}>Want to <em>build</em> with us?</h2>
         <p className="lede reveal" style={{ margin: "32px auto" }}>We hire engineers who'd rather be on the site than on the slide.</p>
         <div className="cta-row reveal">
@@ -227,7 +226,7 @@ export default function About() {
             <div className="footer-tag">Steady delivery<br/>for the energy<br/>transition.</div>
             <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRA LTD<br/>HQ- WATFORD UNITED KINGDOM</div>
           </div>
-          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#">Careers</a></li></ul></div>
+          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#"></a></li></ul></div>
           <div><h5>Connect</h5><ul><li><a href="mailto:info@infragrm.com">info@infragrm.com</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Newsletter</a></li></ul></div>
         </div>
         <div className="footer-bottom">

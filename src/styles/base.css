@@ -29,6 +29,42 @@
   --mono: 'Avenir Next', 'Avenir', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
+/* Light section theme — remaps tokens for alternating black/white bands.
+   Only colors change; layout & content are untouched. */
+.theme-light {
+  position: relative;
+  --ink: #ffffff;
+  --surface: #f3f1ea;
+  --surface-2: #e9e6de;
+  --line: #d9d6cd;
+  --line-soft: #e7e4dc;
+  --bone: #000000;
+  --bone-dim: #161616;
+  --bone-mute: #333333;
+  --green: #000000;
+  --green-dim: #000000;
+  color: var(--bone);
+}
+/* neutralize hardcoded green accents inside light sections */
+.theme-light [stroke="#34d399"] { stroke: #000 !important; }
+.theme-light [fill="#34d399"] { fill: #000 !important; }
+.theme-light .eyebrow .dot { background: #000; box-shadow: none; animation: none; }
+.theme-light::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #ffffff;
+  z-index: -1;
+}
+.theme-light .imgslot {
+  background:
+    repeating-linear-gradient(135deg,
+      rgba(0,0,0,0.035) 0 12px,
+      rgba(0,0,0,0.06) 12px 13px);
+}
+
 * { box-sizing: border-box; }
 *, *::before, *::after {
   font-family: 'Avenir Next', 'Avenir', system-ui, -apple-system, 'Segoe UI', sans-serif !important;
@@ -55,12 +91,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* Type scale ---------------------------------------------- */
 .eyebrow {
   font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--bone-mute);
+  color: #fff;
 }
+.theme-light .eyebrow { color: #000; }
 .eyebrow .dot {
   display: inline-block;
   width: 6px; height: 6px;

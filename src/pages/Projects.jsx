@@ -241,7 +241,7 @@ export default function Projects() {
         </div>
       </section>
       
-      <section className="projgrid">
+      <section className="projgrid theme-light">
         <div className="wrap">
           <div className="pg">
             {PROJECTS.map((p) => (
@@ -334,7 +334,7 @@ export default function Projects() {
             <div className="footer-tag">Steady delivery<br/>for the energy<br/>transition.</div>
             <div className="body-sm" style={{ fontFamily: "var(--mono)", fontSize: "11px", letterSpacing: "0.06em" }}>GRM INFRA LTD<br/>HQ- WATFORD UNITED KINGDOM</div>
           </div>
-          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#">Careers</a></li></ul></div>
+          <div><h5>Company</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="solutions.html">Solutions</a></li><li><a href="projects.html">Projects</a></li><li><a href="global-impact.html">Global impact</a></li><li><a href="#"></a></li></ul></div>
           <div><h5>Connect</h5><ul><li><a href="mailto:info@infragrm.com">info@infragrm.com</a></li><li><a href="#">LinkedIn</a></li><li><a href="#">Newsletter</a></li></ul></div>
         </div>
         <div className="footer-bottom">
