@@ -22,6 +22,66 @@
   .tn .l { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone-mute); margin-top: 16px; }
   .tn .delta { font-family: var(--mono); font-size: 11px; color: var(--green); margin-top: 8px; }
 
+  /* System architecture ============================ */
+  .sysarch {
+    position: relative;
+    background: var(--ink);
+    padding: clamp(64px, 9vw, 130px) var(--pad-x) clamp(40px, 6vw, 80px);
+    overflow: hidden;
+  }
+  .sysarch::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(52,211,153,.10), transparent 55%);
+    z-index: 0;
+  }
+  .sysarch .wrap { max-width: var(--maxw); margin: 0 auto; position: relative; z-index: 1; }
+  .sysarch-head { max-width: 64ch; margin: 0 auto; text-align: center; }
+  .sysarch-head .eyebrow { display: inline-block; }
+  .sysarch-head h2 {
+    font-size: clamp(34px, 4.6vw, 64px); font-weight: 300;
+    letter-spacing: -0.03em; line-height: 1.04;
+  }
+  .sysarch-head h2 em { font-family: var(--serif); font-weight: 400; color: var(--green); font-style: normal; }
+  .sysarch-head p {
+    color: var(--bone-dim); font-size: 16px; line-height: 1.6;
+    max-width: 60ch; margin: 24px auto 0;
+  }
+
+  .sysarch-flow {
+    display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center;
+    margin-top: 36px;
+  }
+  .sa-step {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--bone); padding: 9px 16px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: rgba(255,255,255,.03); backdrop-filter: blur(6px);
+  }
+  .sa-arrow { color: var(--green); font-size: 14px; }
+
+  .sysarch-video {
+    position: relative; margin: clamp(40px, 6vw, 72px) auto 0;
+    max-width: 1000px;
+    border: 1px solid var(--line-soft); border-radius: var(--r-lg);
+    overflow: hidden; background: #000;
+    box-shadow: 0 40px 120px -40px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.02);
+  }
+  .sysarch-video video { width: 100%; height: auto; display: block; }
+  .sa-badge {
+    position: absolute; top: 18px; left: 18px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--bone); padding: 7px 12px; border-radius: 999px;
+    background: rgba(10,10,10,.6); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.14);
+  }
+  .sa-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2.4s ease-in-out infinite; }
+
+  @media (max-width: 700px) {
+    .sysarch-flow { gap: 8px; }
+    .sa-step { padding: 7px 12px; font-size: 10px; }
+  }
+
   /* Map ============================================ */
   .mapwrap {
     position: relative;
@@ -95,7 +155,9 @@
     padding: clamp(80px, 10vw, 140px) var(--pad-x);
   }
   .sdg .wrap { max-width: var(--maxw); margin: 0 auto; }
-  .sdg-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 60px; align-items: start; }
+  .sdg-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 72px; align-items: center; }
+  .sdg-head h2 { margin-top: 4px; }
+  .sdg-head p { color: var(--bone-dim); }
   .sdg-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .sdg-card {
     background: var(--ink);

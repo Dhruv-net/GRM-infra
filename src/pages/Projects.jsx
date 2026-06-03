@@ -113,17 +113,17 @@ const PROJECTS = [
   {
     id: 'crossford',
     cat: 'wind',
-    tag: 'Wind · 1.5 MW',
+    tag: 'Wind · 3.6 MW',
     title: 'Crossford wind farm',
-    sub: 'Operational since 2022 · 2.7 GWh annual output',
+    sub: 'Operational since 2022 · 5 GWh annual output',
     corner: '2022',
     img: '/projects/crossford.jpeg',
     location: 'United Kingdom',
     completion: 'Operational since 2022',
     scope: 'On-site renewable generation with grid export and a community benefit programme.',
     stats: [
-      { v: '1.5', u: 'MW', l: 'Site capacity' },
-      { v: '2.7', u: 'GWh', l: 'Annual forecast output' },
+      { v: '3.6', u: 'MW', l: 'Site capacity' },
+      { v: '5', u: 'GWh', l: 'Annual forecast output' },
       { v: '2022', u: '', l: 'Operational since' },
       { v: 'Grid', u: '', l: 'Export & community' },
     ],
@@ -135,18 +135,18 @@ const PROJECTS = [
   {
     id: 'sigurd',
     cat: 'wind',
-    tag: 'Wind · 1.3 MW',
+    tag: 'Wind · 3.6 MW',
     title: 'Sigurd wind turbine',
     sub: 'Orkney, United Kingdom — Class I turbine · 1,159 UK homes equivalent',
-    corner: '2017',
+    corner: '2019',
     img: '/projects/sigurd.jpg',
     location: 'Burgar Hill, Orkney, United Kingdom',
     completion: 'Operational since 2017',
     scope: 'High-performance Class I turbine with a major blade replacement programme and circular-economy reuse of original blades.',
     stats: [
-      { v: '1.3', u: 'MW', l: 'Site capacity' },
+      { v: '3.6', u: 'MW', l: 'Site capacity' },
       { v: '1,159', u: '', l: 'UK homes equivalent' },
-      { v: '2017', u: '', l: 'Operational since' },
+      { v: '2019', u: '', l: 'Operational since' },
       { v: 'Class I', u: '', l: 'Turbine class' },
     ],
     body: [
@@ -213,11 +213,11 @@ export default function Projects() {
         </div>
       </div>
       
-      <section className="featured">
+      <section className="featured theme-light">
         <div className="wrap">
           <div
             className="feat-card reveal"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", "--bone": "#f5f3ee", "--bone-dim": "#b8b6af", "--bone-mute": "#6e6c66", "--green": "#34d399" }}
             onClick={() => setSelected(PROJECTS.find((p) => p.id === 'norwich'))}
           >
             <div className="bg"></div>
@@ -227,9 +227,9 @@ export default function Projects() {
                 <span className="tag" style={{ background: "rgba(10,10,10,.6)", backdropFilter: "blur(8px)", borderColor: "rgba(255,255,255,.15)", color: "var(--bone)" }}>BESS · 8 MW</span>
               </div>
               <div>
-                <h2>Norwich storage<br/><em>block.</em></h2>
+                <h2 style={{ color: "#f5f3ee" }}>Norwich storage<br/><em>block.</em></h2>
                 <p className="lede">An 8 MW Battery Energy Storage System delivered turnkey in Norwich, United Kingdom — design, engineering, civil coordination, equipment installation, electrical integration, control-system setup, performance testing, and commissioning under a single contract.</p>
-                <div className="feat-stats">
+                <div className="feat-stats" style={{ color: "#f5f3ee" }}>
                   <div><div className="v">8<span className="u">MW</span></div><div className="l">System capacity</div></div>
                   <div><div className="v">Dec<span className="u">2025</span></div><div className="l">Completion</div></div>
                   <div><div className="v">Turnkey</div><div className="l">Scope of works</div></div>
@@ -240,8 +240,8 @@ export default function Projects() {
           </div>
         </div>
       </section>
-      
-      <section className="projgrid theme-light">
+
+      <section className="projgrid">
         <div className="wrap">
           <div className="pg">
             {PROJECTS.map((p) => (
@@ -266,7 +266,7 @@ export default function Projects() {
       </section>
       
       
-      <section className="case">
+      <section className="case theme-light">
         <div className="wrap">
           <div className="case-grid">
             <div className="case-image reveal">

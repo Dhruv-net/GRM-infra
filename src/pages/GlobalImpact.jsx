@@ -98,11 +98,39 @@ export default function GlobalImpact() {
       </section>
       
       
+      <section className="sysarch">
+        <div className="wrap">
+          <div className="sysarch-head">
+            <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 01 — System architecture</div>
+            <h2 className="reveal">Capture energy. Optimise storage.<br/><em>Power the grid.</em></h2>
+            <p className="reveal">A reference architecture engineered for resilience: hybrid generation, intelligent storage, and dispatchable export to the transmission network.</p>
+            <div className="sysarch-flow reveal">
+              <span className="sa-step">Capture energy</span>
+              <span className="sa-arrow">→</span>
+              <span className="sa-step">Optimise storage</span>
+              <span className="sa-arrow">→</span>
+              <span className="sa-step">Power the grid</span>
+            </div>
+          </div>
+
+          <div className="sysarch-video reveal">
+            <span className="sa-badge"><span className="sa-dot"></span>Live system</span>
+            <video
+              src="/system-architecture.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="mapwrap">
         <div className="wrap">
           <div className="map-head">
             <div>
-              <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 01 — Where we operate</div>
+              <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 02 — Where we operate</div>
               <h2 className="reveal">Close to the <em>asset.</em></h2>
               <div className="grid-sync reveal">
                 <span className="grid-sync-dot"></span>
@@ -132,8 +160,9 @@ export default function GlobalImpact() {
                 const x = px + (s.ddx || 0)
                 const y = py + (s.ddy || 0)
                 return (
-                  <g key={s.name}>
-                    <circle cx={x} cy={y} r="4" fill={s.color} stroke="#0a0a0a" strokeWidth="0.8" />
+                  <g key={s.name} className="pin">
+                    <circle className="pulse" cx={x} cy={y} r="3" fill={s.color} />
+                    <circle className="core" cx={x} cy={y} r="4" fill={s.color} stroke="#0a0a0a" strokeWidth="0.8" />
                     <text x={x + s.dx} y={y + s.dy} textAnchor={s.anchor} fontFamily="ui-monospace,monospace" fontSize="11" fill="#e6e4dd" letterSpacing=".5">{s.name}</text>
                   </g>
                 )
@@ -150,7 +179,7 @@ export default function GlobalImpact() {
         <div className="wrap">
           <div className="chart-grid">
             <div>
-              <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 02 — CO₂ avoided</div>
+              <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 03 — CO₂ avoided</div>
               <h2 className="h-1 reveal" style={{ maxWidth: "16ch" }}>Two-and-a-half million<br/>tonnes — and <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>accelerating.</em></h2>
               <p className="lede reveal" style={{ marginTop: "28px" }}>Emissions avoided by GRM-built solar & storage assets in operation, year by year. FY26 figures projected on commissioning schedule.</p>
             </div>
@@ -173,24 +202,24 @@ export default function GlobalImpact() {
       <section className="sdg">
         <div className="wrap">
           <div className="sdg-grid">
-            <div>
-              <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 03 — Aligned to</div>
-              <h2 className="h-1 reveal" style={{ maxWidth: "14ch" }}>Three goals that <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>define the work.</em></h2>
-              <p className="lede reveal" style={{ marginTop: "28px" }}>Our commitment to the UN Sustainable Development Goals is reflected in every project we develop, from clean energy generation to job creation and climate action.</p>
+            <div className="sdg-head">
+              <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 04 — Aligned to</div>
+              <h2 className="h-1 reveal" style={{ maxWidth: "16ch" }}>Three goals that <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>define the work.</em></h2>
+              <p className="lede reveal" style={{ marginTop: "28px", maxWidth: "40ch" }}>Our commitment to the UN Sustainable Development Goals is reflected in every project we develop, from clean energy generation to job creation and climate action.</p>
             </div>
             <div className="sdg-cards">
               <div className="sdg-card reveal card-tilt"><div className="num">SDG 07</div><h4>Affordable & Clean Energy</h4><p>1.4 GW of renewable energy projects in the pipeline, supporting the transition to a lower-carbon energy system.</p></div>
               <div className="sdg-card reveal card-tilt"><div className="num">SDG 08</div><h4>Decent Work & Growth</h4><p>90+ site jobs across 7 markets, supporting local employment and economic development.</p></div>
-              {/* <div className="sdg-card reveal card-tilt"><div className="num">SDG 13</div><h4>Climate Action</h4><p>2.1 Mt CO₂ avoided / yr — equivalent to taking 460,000 cars off the road.</p></div> */}
+              <div className="sdg-card reveal card-tilt"><div className="num">SDG 13</div><h4>Climate Action</h4><p>2.1 Mt CO₂ avoided / yr — equivalent to taking 460,000 cars off the road.</p></div>
             </div>
           </div>
         </div>
       </section>
       
       
-      <section className="community theme-light">
+      {/* <section className="community theme-light">
         <div className="wrap">
-          <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 04 — Beyond the asset</div>
+          <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 05 — Beyond the asset</div>
           <h2 className="h-1 reveal" style={{ maxWidth: "18ch" }}>Communities <em style={{ fontFamily: "var(--serif)", fontStyle: "italic" }}>stay</em> when the<br/>contractors leave.</h2>
           <p className="lede reveal" style={{ marginTop: "28px", maxWidth: "60ch" }}>A solar plant lasts 25 years. The village around it lasts longer. GRM's CSI programme funds skills training, water, and grid access for the communities that host our sites.</p>
       
@@ -221,16 +250,16 @@ export default function GlobalImpact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
-      <section className="cta">
+      {/* <section className="cta">
         <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>Annual report · 2026</div>
         <h2 className="h-display reveal" style={{ fontSize: "clamp(40px,6vw,96px)" }}>Read the full <em>impact report.</em></h2>
         <div className="cta-row reveal" style={{ marginTop: "40px" }}>
           <a href="#" className="btn btn-primary">Download FY25 PDF <span className="arrow">→</span></a>
           <a href="projects.html" className="btn btn-ghost">See projects</a>
         </div>
-      </section>
+      </section> */}
       
       <footer className="footer">
         <div className="footer-grid">

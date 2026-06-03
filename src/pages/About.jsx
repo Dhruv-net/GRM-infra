@@ -50,10 +50,10 @@ export default function About() {
         <div className="wrap">
           <div>
             <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>About GRM Infra</div>
-            <h1 className="h-display reveal">A practice<br/>built around <em>delivery.</em></h1>
+            <h1 className="h-display reveal">An innovative engineering practice for the energy transition</h1>
           </div>
           <div className="reveal">
-            <p className="lede">GRM Infra is an energy infrastructure company focused on the engineering and delivery of utility-scale solar and battery storage projects. We work across complex energy developments, supporting the infrastructure required to power a more reliable and sustainable grid.</p>
+            <p className="lede">GRM Infra is an energy infrastructure company focused on the engineering and delivery of utility-scale solar, wind farm, and battery storage projects, supporting the infrastructure required to power a more reliable, efficient, and sustainable energy grid while quietly building the backbone of a cleaner, more resilient power system.</p>
           </div>
         </div>
       </section>
