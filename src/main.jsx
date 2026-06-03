@@ -34,7 +34,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      {loading && <Loader duration={2000} onFinish={() => setLoading(false)} />}
+      {loading && <Loader duration={2500} onFinish={() => setLoading(false)} />}
       <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />

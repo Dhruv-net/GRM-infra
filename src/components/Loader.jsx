@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/loader.css'
 
-// Full-screen intro loader. Plays the video for ~3s, then fades out and
+// Full-screen intro loader. Plays the video for ~2.5s, then fades out and
 // reveals the app. Shows only once per page load (not on route changes).
-export default function Loader({ onFinish, duration = 3000 }) {
+export default function Loader({ onFinish, duration = 2500, speed = 1.5 }) {
   const [leaving, setLeaving] = React.useState(false)
   const videoRef = React.useRef(null)
 
@@ -14,12 +14,11 @@ export default function Loader({ onFinish, duration = 3000 }) {
 
     const v = videoRef.current
     if (v) {
-      // Speed playback so the FULL animation finishes within `duration`.
-      // e.g. an 8s clip shown for 3s -> rate ~2.67x.
+      // Play at a steady, natural pace (1.5x) rather than cramming the
+      // whole clip into `duration`. The loader fades out after `duration`
+      // regardless of how far the clip has played.
       const setRate = () => {
-        if (v.duration && isFinite(v.duration)) {
-          v.playbackRate = Math.max(1, v.duration / (duration / 1000))
-        }
+        v.playbackRate = speed
       }
       if (v.readyState >= 1) setRate()
       else v.addEventListener('loadedmetadata', setRate, { once: true })
