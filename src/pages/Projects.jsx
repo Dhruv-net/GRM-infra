@@ -290,7 +290,7 @@ export default function Projects() {
       </section>
       
       <section className="cta">
-        <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>Capacity available · FY26 H2</div>
+        <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>Capacity available</div>
         <h2 className="h-display reveal" style={{ fontSize: "clamp(40px,6vw,96px)" }}>The next one's <em>yours.</em></h2>
         <div className="cta-row reveal" style={{ marginTop: "40px" }}>
           <a href="mailto:info@infragrm.com" className="btn btn-primary">Start a conversation <span className="arrow">→</span></a>
