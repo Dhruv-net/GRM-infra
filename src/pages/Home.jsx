@@ -1,13 +1,11 @@
 import { useRef } from 'react'
 import { usePageEffects } from '../hooks/usePageEffects'
-import { useHeroScene } from '../hooks/useHeroScene'
 
 export default function Home() {
   const ref = useRef(null)
   usePageEffects(ref)
-  useHeroScene(ref)
   return (
-    <div ref={ref} data-hero="3d">
+    <div ref={ref}>
       <header className="nav">
         <a href="index.html" className="nav-logo" aria-label="GRM Infra home">
           <img src="/brand/grm-logo.jpeg" alt="GRM Infra" className="brand-mark"/>
@@ -25,42 +23,11 @@ export default function Home() {
       
       
       <section className="hero">
-        <div className="hero-bg"></div>
-        <div className="hero-grid"></div>
-        <canvas id="hero-canvas"></canvas>
-        <div className="hero-photo"></div>
-        <svg className="hero-illus" viewBox="0 0 600 500" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="ig1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#34d399" stopOpacity=".5"/>
-              <stop offset="1" stopColor="#34d399" stopOpacity="0"/>
-            </linearGradient>
-          </defs>
-          
-          <path d="M50 350 L300 220 L550 350 L300 480 Z" stroke="#2a2a2a" strokeWidth="1" fill="url(#ig1)" opacity=".4"/>
-          
-          <g transform="translate(80 240)">
-            <path d="M0 60 L80 20 L160 60 L80 100 Z" fill="#131313" stroke="#34d399" strokeWidth="1.2"/>
-            <path d="M0 60 L0 90 L80 130 L80 100 Z" fill="#0a0a0a" stroke="#34d399" strokeWidth="1"/>
-            <path d="M80 100 L80 130 L160 90 L160 60 Z" fill="#0f0f0f" stroke="#34d399" strokeWidth="1"/>
-            <path d="M20 65 L60 85 M40 55 L80 75 M60 45 L100 65" stroke="#34d399" strokeWidth=".8" opacity=".6"/>
-          </g>
-          
-          <g transform="translate(330 130)">
-            <path d="M0 80 L120 20 L200 60 L80 120 Z" fill="#1e3a5f" stroke="#2c5282" strokeWidth="1.2"/>
-            <path d="M30 90 L130 40 M60 105 L160 55 M0 80 L80 120 M40 60 L120 100 M80 40 L160 80" stroke="#2c5282" strokeWidth=".6"/>
-            <path d="M100 110 L100 180 M104 180 L96 180" stroke="#6e6c66" strokeWidth="1.5"/>
-          </g>
-          
-          <g transform="translate(380 200)">
-            <path d="M0 200 L0 0 L4 0 L4 200 Z" fill="#1c1c1c" stroke="#fbbf24" strokeWidth=".8"/>
-            <path d="M0 0 L160 -40 L160 -36 L4 4 Z" fill="#1c1c1c" stroke="#fbbf24" strokeWidth=".8"/>
-            <path d="M2 0 L80 -20 M2 4 L160 -36" stroke="#fbbf24" strokeWidth=".4" opacity=".6"/>
-            <line x1="120" y1="-30" x2="120" y2="20" stroke="#fbbf24" strokeWidth=".6"/>
-            <rect x="115" y="20" width="10" height="8" fill="#fbbf24" opacity=".5"/>
-          </g>
-        </svg>
-      
+        <video className="hero-video" autoPlay muted loop playsInline preload="auto" poster="/projects/cesis.jpg">
+          <source src="/background.mp4" type="video/mp4"/>
+        </video>
+        <div className="hero-overlay"></div>
+
         <div className="hero-inner">
           <div>
             <div className="eyebrow reveal" style={{ marginBottom: "36px" }}><span className="dot"></span>Utility-Scale Solar · Energy Storage · EPC</div>
@@ -307,9 +274,9 @@ export default function Home() {
         <div className="footer-bottom">
           <div>© 2026 GRM Infra Ltd</div>
           <div className="footer-legal">
-            <a href="#">Privacy policy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy policy</a>
+            <a href="cookie-policy.html">Cookies</a>
+            <a href="terms-conditions.html">Terms & Conditions</a>
           </div>
           <div>ISO 9001 / 14001 / 45001</div>
         </div>

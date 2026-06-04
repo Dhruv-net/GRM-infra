@@ -8,6 +8,9 @@ const ROUTE_MAP = {
   'solutions.html': '/solutions',
   'projects.html': '/projects',
   'global-impact.html': '/global-impact',
+  'privacy-policy.html': '/privacy-policy',
+  'cookie-policy.html': '/cookie-policy',
+  'terms-conditions.html': '/terms-conditions',
 }
 
 /*

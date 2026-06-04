@@ -549,9 +549,9 @@ export default function Solutions() {
         <div className="footer-bottom">
           <div>© 2026 GRM Infra Ltd</div>
           <div className="footer-legal">
-            <a href="#">Privacy policy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy policy</a>
+            <a href="cookie-policy.html">Cookies</a>
+            <a href="terms-conditions.html">Terms & Conditions</a>
           </div>
           <div>ISO 9001 / 14001 / 45001</div>
         </div>

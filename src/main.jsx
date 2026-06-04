@@ -6,6 +6,9 @@ import About from './pages/About'
 import Solutions from './pages/Solutions'
 import Projects from './pages/Projects'
 import GlobalImpact from './pages/GlobalImpact'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import CookiePolicy from './pages/CookiePolicy'
+import TermsConditions from './pages/TermsConditions'
 import Loader from './components/Loader'
 import './index.css'
 
@@ -42,6 +45,9 @@ function App() {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/global-impact" element={<GlobalImpact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

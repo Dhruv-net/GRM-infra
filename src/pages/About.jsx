@@ -99,35 +99,35 @@ export default function About() {
       
       <section className="section-pad wrap theme-light">
         <div className="eyebrow reveal" style={{ marginBottom: "36px" }}>// 02 — Milestones</div>
-        <h2 className="h-2 reveal" style={{ marginBottom: "56px", maxWidth: "18ch" }}>Twelve years, plotted as deliverables.</h2>
-      
-        <div className="timeline reveal">
-          <div className="yr">2014</div>
-          <div className="ev"><h4>Founded as GRM Heavy Lift</h4><p>Three founding engineers, two crawler cranes, one site office in Coimbatore.</p></div>
-        </div>
-        <div className="timeline reveal">
-          <div className="yr">2017</div>
-          <div className="ev"><h4>Owned crane fleet — 12 units</h4><p>First major contract: 80 turbine erections in Karnataka.</p></div>
-        </div>
+        <h2 className="h-2 reveal" style={{ marginBottom: "56px", maxWidth: "18ch" }}>Built Through Renewable Projects.</h2>
+
         <div className="timeline reveal">
           <div className="yr">2019</div>
-          <div className="ev"><h4>Solar EPC practice spun up</h4><p>30 MW pilot in Telangana — first asset built and lifted by the same firm.</p></div>
+          <div className="ev"><h4>GRM Founded</h4><p>Started operations in renewable energy infrastructure and project support.</p></div>
         </div>
         <div className="timeline reveal">
-          <div className="yr">2022</div>
-          <div className="ev"><h4>Crossed 500 MW solar in delivery</h4><p>Hyderabad HQ established. Engineering staff passes 400.</p></div>
+          <div className="yr">2020</div>
+          <div className="ev"><h4>Entry into Wind Energy</h4><p>Expanded into wind farm operations and installation support.</p></div>
         </div>
         <div className="timeline reveal">
-          <div className="yr">2023</div>
-          <div className="ev"><h4>BESS practice launched</h4><p>First grid-tied 60 MWh installation, Maharashtra.</p></div>
+          <div className="yr">2021</div>
+          <div className="ev"><h4>Solar Projects & EPC Growth</h4><p>Began delivering solar infrastructure and EPC services.</p></div>
+        </div>
+        <div className="timeline reveal">
+          <div className="yr">2024</div>
+          <div className="ev"><h4>Multi-Sector Renewable Operations</h4><p>Established operations across wind and solar energy sectors.</p></div>
         </div>
         <div className="timeline reveal">
           <div className="yr">2025</div>
-          <div className="ev"><h4>1.4 GW pipeline · 14 markets</h4><p>Expansion into MENA and SE Asia. ISO 45001 certified across operations.</p></div>
+          <div className="ev"><h4>Battery Storage Integration</h4><p>Expanded into Battery Energy Storage Systems (BESS) solutions.</p></div>
         </div>
         <div className="timeline reveal">
-          <div className="yr">2026</div>
-          <div className="ev"><h4>620 MWh storage commissioned</h4><p>Mundra grid-tie comes online — largest single BESS in GRM portfolio to date.</p></div>
+          <div className="yr">2025</div>
+          <div className="ev"><h4>Expanding Energy Infrastructure</h4><p>Strengthening capabilities in renewable EPC and grid integration.</p></div>
+        </div>
+        <div className="timeline reveal">
+          <div className="yr">Today</div>
+          <div className="ev"><h4>Building the Future Grid</h4><p>Delivering reliable renewable infrastructure for long-term energy systems.</p></div>
         </div>
       </section>
       
@@ -235,9 +235,9 @@ export default function About() {
         <div className="footer-bottom">
           <div>© 2026 GRM Infra Ltd</div>
           <div className="footer-legal">
-            <a href="#">Privacy policy</a>
-            <a href="#">Cookies</a>
-            <a href="#">Terms & Conditions</a>
+            <a href="privacy-policy.html">Privacy policy</a>
+            <a href="cookie-policy.html">Cookies</a>
+            <a href="terms-conditions.html">Terms & Conditions</a>
           </div>
           <div>ISO 9001 / 14001 / 45001</div>
         </div>
