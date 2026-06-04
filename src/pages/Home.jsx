@@ -270,7 +270,7 @@ export default function Home() {
         <p className="lede reveal" style={{ margin: "32px auto" }}>Our origination team replies within two business days. Bring a site, a load, or a problem.</p>
         <div className="cta-row reveal">
           <a href="mailto:info@infragrm.com" className="btn btn-primary">info@infragrm.com <span className="arrow">→</span></a>
-          <a href="about.html" className="btn btn-ghost">Meet the team</a>
+          {/* <a href="about.html" className="btn btn-ghost">Meet the team</a> */}
         </div>
       </section>
       

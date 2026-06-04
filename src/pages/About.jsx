@@ -5,8 +5,8 @@ const CERTS = [
   { img: '/certifications/iso-9001.svg', alt: 'ISO 9001', desc: ['Quality', 'Management'] },
   { img: '/certifications/iso-14001.svg', alt: 'ISO 14001', desc: ['Environmental', 'Management'] },
   { img: '/certifications/iso-45001.svg', alt: 'ISO 45001', desc: ['Occupational', 'Health & Safety'] },
-  { img: '/certifications/iecre.svg', alt: 'IECRE', desc: ['PV plant', 'certification'] },
-  { img: '/certifications/leea.svg', alt: 'LEEA', desc: ['Lifting Equipment', 'Engineers Assoc.'] },
+  // { img: '/certifications/iecre.svg', alt: 'IECRE', desc: ['PV plant', 'certification'] },
+  // { img: '/certifications/leea.svg', alt: 'LEEA', desc: ['Lifting Equipment', 'Engineers Assoc.'] },
   { img: '/certifications/cdm-2015.svg', alt: 'CDM 2015', desc: ['Construction', 'Compliance'] },
   { img: '/certifications/CHAS.jpeg', alt: 'CHAS', desc: ['CHAS'] },
   { img: '/certifications/CONSTRUCTION%20LINE%20GOLD.jpeg', alt: 'Construction Line Gold', desc: ['Construction', 'Line Gold'] },
@@ -82,12 +82,15 @@ export default function About() {
         <div className="story-grid">
           <div>
             <div className="eyebrow reveal" style={{ marginBottom: "24px" }}>// 01 — Story</div>
-            <h2 className="reveal">Started as a rigging crew. Grew into the EPC.</h2>
+            <h2 className="reveal">Built Through Renewable Energy.</h2>
           </div>
           <div className="story-body reveal">
-            <p><strong>GRM began in 2014 as a heavy-lift rigging contractor</strong> on wind sites in Tamil Nadu, working with crews who had spent twenty years putting steel in the air. The job was unglamorous — it taught us what good engineering looked like from the receiving end.</p>
-            <p>By 2017 we were running our own crane fleet. By 2019, lifting solar trackers we'd specified ourselves. By 2022, the engineering practice had grown past the lifting business — and we were closing utility-scale solar EPC contracts of our own.</p>
-            <p>BESS came in 2023, when our first solar customers asked us to add storage. Today GRM is structured around three integrated practices — solar, BESS, and lifting — but the operating philosophy hasn't changed since 2014: <strong>show up, do the work, hand over an asset that runs.</strong></p>
+            <p><strong>GRM began in 2019 with a clear focus on renewable infrastructure</strong> supporting clean energy projects across utility and commercial sectors. What started as a small operation quickly evolved through hands-on work in the field, delivering reliable execution across complex energy environments.</p>
+            <p>As demand for renewable power accelerated, GRM expanded into wind energy projects, supporting installation, infrastructure, and site operations across multiple developments. That experience laid the foundation for a broader engineering and delivery capability.</p>
+            <p>From wind, the company moved into utility-scale solar — developing expertise in solar EPC, system integration, and large-scale energy deployment. Working directly within live project environments shaped the way we approach engineering: practical, reliable, and built around long-term performance
+            <p>With the market shifting toward energy resilience and grid stability, GRM entered the Battery Energy Storage Systems (BESS) sector, integrating storage solutions alongside renewable generation to support the next phase of energy infrastructure</p>
+            </p>
+          
           </div>
         </div>
       </section>
@@ -211,7 +214,7 @@ export default function About() {
         <h2 className="h-display reveal" style={{ fontSize: "clamp(40px,6vw,96px)" }}>Want to <em>build</em> with us?</h2>
         <p className="lede reveal" style={{ margin: "32px auto" }}>We hire engineers who'd rather be on the site than on the slide.</p>
         <div className="cta-row reveal">
-          <a href="#" className="btn btn-primary">Open roles <span className="arrow">→</span></a>
+          {/* <a href="#" className="btn btn-primary">Open roles <span className="arrow">→</span></a> */}
           <a href="mailto:info@infragrm.com" className="btn btn-ghost">info@infragrm.com</a>
         </div>
       </section>
