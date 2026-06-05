@@ -15,6 +15,12 @@
   .principle h3 { margin: 16px 0 14px; font-size: 26px; font-weight: 400; letter-spacing: -0.02em; }
   .principle p { color: var(--bone-dim); font-size: 14px; line-height: 1.55; max-width: 36ch; }
 
+  .opgrid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-soft); border-left: 1px solid var(--line-soft); }
+  .opitem { padding: 48px 40px; border-right: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+  .opitem .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--green); }
+  .opitem h3 { margin: 16px 0 12px; font-size: 24px; font-weight: 400; letter-spacing: -0.02em; }
+  .opitem p { color: var(--bone-dim); font-size: 14px; line-height: 1.55; max-width: 42ch; }
+
   .story-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
   .story-grid h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; letter-spacing: -0.025em; line-height: 1.05; }
   .story-grid h2 em { font-family: var(--serif); font-weight: 400; }
@@ -71,6 +77,7 @@
     .about-hero .wrap { grid-template-columns: 1fr; }
     .principles { grid-template-columns: 1fr; }
     .principle { border-right: 0; border-bottom: 1px solid var(--line-soft); }
+    .opgrid { grid-template-columns: 1fr; }
     .story-grid { grid-template-columns: 1fr; gap: 40px; }
     .timeline { grid-template-columns: 1fr; gap: 8px; }
     .leaders { grid-template-columns: 1fr 1fr; }

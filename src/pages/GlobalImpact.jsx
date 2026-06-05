@@ -116,7 +116,7 @@ export default function GlobalImpact() {
           <div className="sysarch-video reveal">
             <span className="sa-badge"><span className="sa-dot"></span>Live system</span>
             <video
-              src="/system-architecture.mp4"
+              src="/global-impact.mp4"
               autoPlay
               muted
               loop

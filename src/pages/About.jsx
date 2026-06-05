@@ -50,7 +50,7 @@ export default function About() {
         <div className="wrap">
           <div>
             <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>About GRM Infra</div>
-            <h1 className="h-display reveal">An innovative engineering practice for the energy transition</h1>
+            <h1 className="h-display reveal" style={{ fontSize: "clamp(34px, 5.1vw, 80px)" }}>An innovative engineering practice for the energy transition</h1>
           </div>
           <div className="reveal">
             <p className="lede">GRM Infra is an energy infrastructure company focused on the engineering and delivery of utility-scale solar, wind farm, and battery storage projects, supporting the infrastructure required to power a more reliable, efficient, and sustainable energy grid while quietly building the backbone of a cleaner, more resilient power system.</p>
@@ -94,11 +94,37 @@ export default function About() {
           </div>
         </div>
       </section>
-      
+
+      <section className="section-pad wrap">
+        <div className="eyebrow reveal" style={{ marginBottom: "36px" }}>// 02 — Operating principles</div>
+        <div className="opgrid reveal">
+          <div className="opitem">
+            <div className="num">01</div>
+            <h3>Engineering-led</h3>
+            <p>Chartered engineers at every stage — design, delivery, and operation.</p>
+          </div>
+          <div className="opitem">
+            <div className="num">02</div>
+            <h3>Grid-grade reliability</h3>
+            <p>Built to IEC, G99 and ENA standards with rigorous QA/QC governance.</p>
+          </div>
+          <div className="opitem">
+            <div className="num">03</div>
+            <h3>Globally scalable</h3>
+            <p>Supporting clean energy developments across 7 international markets.</p>
+          </div>
+          <div className="opitem">
+            <div className="num">04</div>
+            <h3>Performance obsessed</h3>
+            <p>Every project is engineered for long-term energy performance, durability, and asset longevity.</p>
+          </div>
+        </div>
+      </section>
+
       <div className="divider"></div>
-      
+
       <section className="section-pad wrap theme-light">
-        <div className="eyebrow reveal" style={{ marginBottom: "36px" }}>// 02 — Milestones</div>
+        <div className="eyebrow reveal" style={{ marginBottom: "36px" }}>// 03 — Milestones</div>
         <h2 className="h-2 reveal" style={{ marginBottom: "56px", maxWidth: "18ch" }}>Built Through Renewable Projects.</h2>
 
         <div className="timeline reveal">
