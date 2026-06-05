@@ -112,7 +112,7 @@ export default function Solutions() {
           </div>
       
           <div className="specs">
-            <div className="spec"><div className="v">5–1000<span className="u">MW</span></div><div className="l">Plant capacity range</div></div>
+            <div className="spec"><div className="v">20–1000<span className="u">MW</span></div><div className="l">Plant capacity range</div></div>
             <div className="spec"><div className="v">±60<span className="u">°</span></div><div className="l">Tracker rotation</div></div>
             <div className="spec"><div className="v">25<span className="u">yrs</span></div><div className="l">Performance warranty</div></div>
             <div className="spec"><div className="v">9–14<span className="u">mo</span></div><div className="l">Typical EPC duration</div></div>
@@ -310,7 +310,7 @@ export default function Solutions() {
           </div>
       
           <div className="specs">
-            <div className="spec"><div className="v">6–250<span className="u">MW</span></div><div className="l">Project capacity</div></div>
+            <div className="spec"><div className="v">50–500<span className="u">MW</span></div><div className="l">Project capacity</div></div>
             <div className="spec"><div className="v">I–III</div><div className="l">IEC turbine class</div></div>
             <div className="spec"><div className="v">160<span className="u">m</span></div><div className="l">Max hub height</div></div>
             <div className="spec"><div className="v">30<span className="u">yr</span></div><div className="l">Asset design life</div></div>
@@ -525,7 +525,7 @@ export default function Solutions() {
       </section>
       
       <section className="cta">
-        <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>Capacity available</div>
+        <div className="eyebrow reveal" style={{ marginBottom: "32px" }}><span className="dot"></span>Capacity available · FY26 H2</div>
         <h2 className="h-display reveal" style={{ fontSize: "clamp(40px,6vw,96px)" }}>Bring us a <em>site</em>.<br/>We'll bring a <em>plan.</em></h2>
         <div className="cta-row reveal" style={{ marginTop: "40px" }}>
           <a href="mailto:info@infragrm.com" className="btn btn-primary">Start a conversation <span className="arrow">→</span></a>

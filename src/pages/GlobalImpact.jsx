@@ -199,7 +199,6 @@ export default function GlobalImpact() {
       <div className="divider"></div>
       
       
-      
       <section className="sdg">
         <div className="wrap">
           <div className="sdg-grid">
