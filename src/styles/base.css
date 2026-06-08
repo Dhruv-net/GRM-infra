@@ -189,6 +189,41 @@ section { position: relative; }
 }
 .nav-cta:hover { background: var(--bone); color: var(--ink); border-color: var(--bone); }
 
+/* Mobile burger toggle — injected by usePageEffects, hidden on desktop.
+   Shown only inside the max-width:900px media query below. */
+.nav-burger {
+  display: none;
+  position: relative;
+  width: 42px; height: 38px;
+  flex: 0 0 auto;
+  align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: border-color .2s ease;
+}
+.nav-burger:hover { border-color: var(--bone); }
+.nav-burger-bars,
+.nav-burger-bars::before,
+.nav-burger-bars::after {
+  content: "";
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--bone);
+  border-radius: 2px;
+}
+.nav-burger-bars { position: relative; transition: background .15s ease; }
+.nav-burger-bars::before,
+.nav-burger-bars::after {
+  position: absolute; left: 0;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1);
+}
+.nav-burger-bars::before { top: -6px; }
+.nav-burger-bars::after  { top: 6px; }
+/* open state morphs the three bars into an ✕ */
+.nav.nav-open .nav-burger-bars { background: transparent; }
+.nav.nav-open .nav-burger-bars::before { transform: translateY(6px) rotate(45deg); }
+.nav.nav-open .nav-burger-bars::after  { transform: translateY(-6px) rotate(-45deg); }
+
 /* Buttons ---------------------------------------------- */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
@@ -313,7 +348,37 @@ section { position: relative; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
+  /* Show the burger; collapse links + CTA into a dropdown it controls. */
+  .nav { flex-wrap: wrap; }
+  .nav-logo   { order: 1; }
+  .nav-burger { display: inline-flex; order: 2; }
+  .nav-links  { order: 3; }
+  .nav-cta    { order: 4; }
+
+  /* closed: hide menu items (each takes a full-width row when shown) */
+  .nav-links,
+  .nav .nav-cta { display: none; flex-basis: 100%; }
+
+  /* open: the fixed bar grows downward into a menu panel */
+  .nav.nav-open { background: rgba(10,10,10,0.96); }
+  .nav.nav-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: 100%;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .nav.nav-open .nav-links a { width: 100%; padding: 11px 0; font-size: 15px; }
+  .nav.nav-open .nav-cta {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 

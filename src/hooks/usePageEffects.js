@@ -125,12 +125,60 @@ export function usePageEffects(ref) {
     }
     root.addEventListener('click', onClick)
 
+    // --- Mobile burger menu ---
+    // Inject a hamburger toggle into the (duplicated, per-page) .nav and wire
+    // open/close. On desktop CSS keeps the button hidden; on phones/tablets it
+    // reveals the links + CTA, which CSS collapses into a dropdown panel.
+    const burgerCleanups = []
+    const nav = root.querySelector('.nav')
+    if (nav) {
+      let burger = nav.querySelector('.nav-burger')
+      if (!burger) {
+        burger = document.createElement('button')
+        burger.type = 'button'
+        burger.className = 'nav-burger'
+        burger.setAttribute('aria-label', 'Toggle navigation menu')
+        burger.setAttribute('aria-expanded', 'false')
+        burger.innerHTML = '<span class="nav-burger-bars" aria-hidden="true"></span>'
+        nav.appendChild(burger)
+      }
+      const setOpen = (open) => {
+        nav.classList.toggle('nav-open', open)
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false')
+      }
+      const onBurger = (e) => {
+        e.stopPropagation()
+        setOpen(!nav.classList.contains('nav-open'))
+      }
+      // Tapping a menu link or the logo navigates — close the panel after.
+      const onNavClick = (e) => {
+        if (e.target.closest('.nav-links a, .nav-cta, .nav-logo')) setOpen(false)
+      }
+      const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
+      const onResize = () => { if (window.innerWidth > 900) setOpen(false) }
+
+      burger.addEventListener('click', onBurger)
+      nav.addEventListener('click', onNavClick)
+      document.addEventListener('keydown', onKey)
+      window.addEventListener('resize', onResize)
+
+      burgerCleanups.push(() => {
+        burger.removeEventListener('click', onBurger)
+        nav.removeEventListener('click', onNavClick)
+        document.removeEventListener('keydown', onKey)
+        window.removeEventListener('resize', onResize)
+        nav.classList.remove('nav-open')
+        if (burger.parentNode) burger.parentNode.removeChild(burger)
+      })
+    }
+
     return () => {
       revealIO.disconnect()
       countIO.disconnect()
       tiltCleanups.forEach((fn) => fn())
       chipHandlers.forEach((fn) => fn())
       root.removeEventListener('click', onClick)
+      burgerCleanups.forEach((fn) => fn())
     }
   }, [ref, navigate, location.pathname])
 }
